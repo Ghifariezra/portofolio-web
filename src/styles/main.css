@@ -10,6 +10,9 @@
     /* * {
         border: red 1px solid;
     } */
+     body {
+        overflow-x: hidden;
+     }
 }
 
 @layer components {
