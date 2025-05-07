@@ -19,8 +19,8 @@ function NavbarComponents() {
           <a
             href={item.href}
             className='text-item'
-            target="_blank"
-            rel="noopener noreferrer"
+            // target="_blank"
+            // rel="noopener noreferrer"
           >
             {item.name}
           </a>
