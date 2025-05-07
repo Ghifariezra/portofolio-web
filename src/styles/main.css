@@ -14,6 +14,17 @@
 
 @layer components {
 
+    /* Loader */
+    .load-section{
+        @apply w-full h-screen flex flex-col items-center justify-center bg-linear-to-t from-sky-300/75 to-sky-500/75
+    }
+    .wrapper-load {
+        @apply flex gap-3
+    }
+    .animate-text {
+        @apply text-white text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-extrabold animate-bounce ease-in-out
+    }
+
     /* Navbar */
     .nav-section {
         @apply container mx-auto sticky top-6 z-50 select-none
@@ -25,7 +36,6 @@
 
     .menu-item {
         @apply flex items-center focus-within:bg-sky-200 focus-within:opacity-80 focus-within:rounded-lg focus-within:cursor-pointer focus-within:text-sky-500 px-2 sm:px-3 sm:py-0.5 md:px-4 lg:px-5 lg:hover:bg-sky-200 lg:hover:rounded-lg lg:hover:cursor-pointer lg:hover:text-sky-500 xl:px-6 xl:hover:bg-sky-200 xl:hover:rounded-lg xl:hover:cursor-pointer xl:hover:text-sky-500 2xl:px-7 2xl:hover:bg-sky-200 2xl:hover:rounded-lg 2xl:hover:cursor-pointer 2xl:hover:text-sky-500 selection:bg-sky-200 selection:text-sky-500 transition-all duration-300 ease-in-out
-        
     }
 
     .text-item {
@@ -108,5 +118,86 @@
 
     .skill {
         @apply mx-auto hover:scale-130 hover:-rotate-12 transition-all duration-300 w-8 sm:w-6 lg:w-10
+    }
+
+    /* Projects */
+    .project-section {
+        @apply mx-auto select-none bg-sky-100 py-6 overflow-hidden
+    }
+
+    .project-content {
+        @apply mx-4 my-6 sm:mx-6 md:mx-8 lg:my-10 xl:my-12 2xl:my-16
+    }
+
+    .head-project {
+        @apply flex justify-center my-6 w-fit mx-auto px-8 py-2 bg-sky-400/50 rounded-lg drop-shadow-sm origin-top-left rotate-4 transition-all duration-300 ease-in
+    }
+
+    .text-project {
+        @apply text-center text-white text-xl lg:text-3xl 2xl:text-4xl font-bold font-project tracking-wider
+    }
+
+    .wrapper-card {
+        @apply grid gap-5 p-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4
+    }
+
+    .card-project {
+        @apply w-full bg-white p-4 rounded-lg drop-shadow-sm
+    }
+
+    .img-project {
+        @apply w-full h-60 bg-center bg-cover hover:drop-shadow-sky-400/25 hover:drop-shadow-xl hover:-translate-y-4 hover:scale-110 transition-all duration-300 ease-in rounded-2xl overflow-hidden relative
+    }
+
+    .wrapper-preview {
+        @apply absolute inset-0 flex items-center justify-center hover:bg-gradient-to-t from-sky-300/95 via-transparent to-transparent transition-all lg:duration-300 ease-in-out
+    }
+
+    .text-preview {
+        @apply hidden group-hover:block px-3 py-1 bg-sky-800/50 rounded-lg text-white text-center text-lg md:text-xl font-bold animate-pulse
+    }
+
+    .bounce-preview {
+        @apply inline-block animate-bounce
+    }
+
+    .hover-certif {
+        @apply lg:absolute lg:inset-0 lg:bg-center lg:bg-contain lg:rounded-2xl lg:scale-115
+    }
+
+    .wrapper-content-card {
+        @apply flex flex-col gap-2 p-4
+    }
+
+    .wrapper-source {
+        @apply hidden lg:flex lg:gap-4 lg:justify-center
+    }
+
+    .hover-git {
+        @apply w-4 h-4 bg-center bg-cover md:group-hover:scale-110 md:group-hover:opacity-75 transition-all duration-300 ease-in
+    }
+
+    .trigger-certif {
+        @apply w-4 h-4 scale-110 bg-center bg-cover md:hover:scale-130 md:hover:opacity-75 transition-all duration-300 ease-in cursor-pointer
+    }
+
+    .head-card {
+        @apply text-sky-700 text-base sm:text-lg md:text-xl font-bold tracking-wider break-words
+    }
+
+    .head-line {
+        @apply border-slate-300
+    }
+
+    .head-stack {
+        @apply text-sky-700/50 text-sm tracking-wider
+    }
+
+    .wrapper-stack {
+        @apply flex flex-wrap gap-2
+    }
+
+    .ratio-stack {
+        @apply w-6 h-6
     }
 }
