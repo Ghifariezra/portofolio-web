@@ -6,7 +6,7 @@ function NavbarComponents() {
     { id: 2, name: 'Project', href: '#project' },
     { id: 3, name: 'Certificate', href: '/certificate' },
     { id: 4, name: 'Contact', href: '#contact' },
-    { id: 5, name: 'Resume', href: 'https://drive.google.com/file/d/1lyRiKtLnH7jEQSaXoGDqQVy5_EaHbPYJ/view?usp=drive_link' },
+    { id: 5, name: 'Resume', href: '#' },
   ])
 
   return (
