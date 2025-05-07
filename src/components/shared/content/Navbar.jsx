@@ -5,7 +5,7 @@ function NavbarComponents() {
     { id: 1, name: 'About', href: '/' },
     { id: 2, name: 'Project', href: '#project' },
     { id: 3, name: 'Certificate', href: '/certificate' },
-    { id: 4, name: 'Contact', href: '#contact' },
+    { id: 4, name: 'Contact', href: '/contact' },
     { id: 5, name: 'Resume', href: '#' },
   ])
 

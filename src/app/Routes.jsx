@@ -20,6 +20,7 @@ const Loader = lazy(() => import("@components/loaders/Loader"));
 const Root = lazyWithDelay(() => import("@layout/MainLayout"), 1000);
 const Home = lazyWithDelay(() => import("@pages/Home"), 1000);
 const Certificate = lazyWithDelay(() => import("@pages/Certificate"), 1000);
+const Contact = lazyWithDelay(() => import("@pages/Contact"), 1000);
 
 const router = createBrowserRouter([
     {
@@ -28,6 +29,7 @@ const router = createBrowserRouter([
         children: [
             { index: true, Component: Home },
             { path: "certificate", Component: Certificate },
+            { path: "contact", Component: Contact },
         ]
     },
 ]);

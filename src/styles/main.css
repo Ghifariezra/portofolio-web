@@ -79,6 +79,10 @@
         @apply flex flex-col justify-between items-center sm:items-stretch sm:mr-10 sm:my-0 md:mr-16 md:gap-2 xl:mr-18 2xl:mr-20
     }
 
+    .hero-line{
+        @apply w-full mt-4 sm:mt-0 border-slate-300
+    }
+
     .text-greeting {
         @apply p-4 text-lg text-center sm:mt-0 sm:text-xl sm:text-left md:text-2xl lg:text-4xl xl:text-4xl 2xl:text-5xl font-normal text-slate-900 tracking-wider
     }

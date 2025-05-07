@@ -28,7 +28,7 @@ function HeroComponents() {
           className='text-greeting group'>
           Hi, I'm <span data-aos='zoom-in' className='full-name'>Ghifari Ezra Ramadhan</span> <span data-aos='fade-up' className='waving-hand'>👋</span> <br /> a <span data-aos='fade-left' className='role hidden'>Fullstack Web Developer</span><span data-aos='fade-left' className='role'>Tech Generalist</span>
         </h1>
-        <hr className='w-full mt-4 sm:mt-0 border-slate-300' />
+        <hr className='hero-line' />
         <p
           className='text-description' data-aos="flip-up">
           I'm a university student at Universitas Pancasila, currently exploring the world of full-stack web development. With a strong passion for technology, I’m committed to continuous learning and building digital solutions that are both efficient and meaningful. I believe that technology is not just a tool, but a bridge to solving real-world problems. I’m always open to collaboration, innovation, and new challenges in the web development space.
