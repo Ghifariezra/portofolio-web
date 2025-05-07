@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+/* Require only if you want to use FlyonUI JS component */
+@theme {
+    --font-display: "Sansation", sans-serif;
+    --font-project: "Rubik Scribble", system-ui;
+}
+
+@layer base {
+    /* * {
+        border: red 1px solid;
+    } */
+}
+
+@layer components {
+
+    /* Navbar */
+    .nav-section {
+        @apply container mx-auto sticky top-6 z-50 select-none
+    }
+
+    .li-menu {
+        @apply flex items-center justify-between px-4 py-2 bg-linear-to-t from-sky-300/75 to-sky-500/75 text-white rounded-xl mx-4 my-6 sm:px-6 sm:py-4 sm:mx-6 md:px-8 md:mx-8 md:justify-evenly
+    }
+
+    .menu-item {
+        @apply flex items-center focus-within:bg-sky-200 focus-within:opacity-80 focus-within:rounded-lg focus-within:cursor-pointer focus-within:text-sky-500 px-2 sm:px-3 sm:py-0.5 md:px-4 lg:px-5 lg:hover:bg-sky-200 lg:hover:rounded-lg lg:hover:cursor-pointer lg:hover:text-sky-500 xl:px-6 xl:hover:bg-sky-200 xl:hover:rounded-lg xl:hover:cursor-pointer xl:hover:text-sky-500 2xl:px-7 2xl:hover:bg-sky-200 2xl:hover:rounded-lg 2xl:hover:cursor-pointer 2xl:hover:text-sky-500 selection:bg-sky-200 selection:text-sky-500 transition-all duration-300 ease-in-out
+        
+    }
+
+    .text-item {
+        @apply text-center text-[10px] sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-bold
+    }
+
+    /* Hero */
+    .hero-section {
+        @apply container mx-auto select-none
+    }
+
+    .hero-content {
+        @apply sm:flex sm:flex-row-reverse sm:justify-center mx-4 my-6 sm:mx-6 md:mx-8 lg:my-10 xl:my-12 2xl:my-16
+    }
+
+    .hero-image {
+        @apply rounded-t-full sm:rounded-t-4xl sm:rounded-br-4xl xl:rounded-none xl:rounded-t-4xl xl:rounded-bl-4xl overflow-hidden border-double border-4 border-sky-700/20 relative transition-transform duration-500 ease-in-out sm:hover:scale-105;
+    }
+
+
+    .profile {
+        @apply h-full object-cover object-top group-hover:scale-105 transition-transform duration-300 ease-in
+    }
+
+    .profile-gradient {
+        @apply absolute inset-0 bg-gradient-to-t from-sky-700/70 to-transparent group-hover:from-sky-700/80 transition-all duration-300
+    }
+
+    .profile-overlay {
+        @apply absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300
+    }
+
+    .profile-name {
+        @apply text-sm md:text-sm lg:text-base xl:text-lg 2xl:text-xl font-medium tracking-wider
+    }
+
+    .profile-role {
+        @apply text-sm md:text-sm lg:text-base xl:text-lg 2xl:text-xl font-thin tracking-wider
+    }
+
+    .hero-text {
+        @apply flex flex-col justify-between items-center sm:items-stretch sm:mr-10 sm:my-0 md:mr-16 md:gap-2 xl:mr-18 2xl:mr-20
+    }
+
+    .text-greeting {
+        @apply p-4 text-lg text-center sm:mt-0 sm:text-xl sm:text-left md:text-2xl lg:text-4xl xl:text-4xl 2xl:text-5xl font-normal text-slate-900 tracking-wider
+    }
+
+    .full-name {
+        @apply font-bold text-sky-600
+    }
+
+    .waving-hand {
+        @apply inline-block cursor-pointer group-hover:rotate-45 transition-all duration-300
+    }
+
+    .role {
+        @apply inline-block sm:mt-3.5 sm:mb-3.5 font-bold group-hover:underline text-sky-600 group-hover:decoration-sky-700/50 group-hover:translate-y-4 transition-transform duration-300 cursor-pointer
+    }
+
+    .text-description {
+        @apply p-4 text-sm text-justify md:text-base lg:text-lg xl:text-xl 2xl:text-2xl text-slate-700 font-light tracking-wider
+    }
+
+    .btn-message {
+        @apply mt-6 px-4 py-2 text-[10px] bg-blue-500 text-white rounded-lg sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl hover:bg-blue-600 transition-all duration-300 ease-in font-bold cursor-pointer tracking-wider
+    }
+
+    .envelope {
+        @apply inline-block ml-2 animate-bounce scale-125 group-hover:scale-150 group-hover:rotate-12 transition-all duration-300
+    }
+
+    .skills {
+        @apply grid grid-cols-4 gap-4 w-full h-full p-8 sm:grid-cols-1 sm:gap-10 sm:w-1/2 sm:items-center sm:p-0 sm:mr-4 sm:border-slate-300 md:gap-18 md:border-r md:p-4 lg:p-0 xl:mt-0 2xl:mt-0
+    }
+
+    .tech-stack {
+        @apply hidden -rotate-90 sm:block sm:rotate-0 sm:mx-auto sm:text-[6px] sm:text-center md:text-[10px] lg:text-[12px] xl:text-[14px] font-bold text-slate-900 tracking-wider
+    }
+
+    .skill {
+        @apply mx-auto hover:scale-130 hover:-rotate-12 transition-all duration-300 w-8 sm:w-6 lg:w-10
+    }
+}
