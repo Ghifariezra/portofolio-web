@@ -3,10 +3,9 @@ import { useState } from 'react'
 function NavbarComponents() {
   const [items] = useState([
     { id: 1, name: 'About', href: '/' },
-    { id: 2, name: 'Project', href: '/project' },
-    { id: 3, name: 'Certificate', href: '/certificate' },
-    { id: 4, name: 'Contact', href: '/contact' },
-    { id: 5, name: 'Resume', href: '#' },
+    { id: 2, name: 'Certificate', href: '/certificate' },
+    { id: 3, name: 'Contact', href: '/contact' },
+    { id: 4, name: 'Resume', href: '#' },
   ])
 
   return (

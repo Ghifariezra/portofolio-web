@@ -22,7 +22,6 @@ const Home = lazy(() => import("@pages/Home"));
 const NotFound = lazy(() => import("@pages/NotFound"));
 const Certificate = lazy(() => import("@pages/Certificate"));
 const Contact = lazy(() => import("@pages/Contact"));
-const Project = lazy(() => import("@pages/Project"));
 
 const router = createBrowserRouter([
     {
@@ -30,15 +29,12 @@ const router = createBrowserRouter([
         Component: Root,
         children: [
             { index: true, Component: Home },
-            { path: "project", Component: Project },
             { path: "certificate", Component: Certificate },
             { path: "contact", Component: Contact },
             { path: "*", Component: NotFound },
         ]
     },
 ]);
-
-const root = document.getElementById("root");
 
 function App() {
     return (

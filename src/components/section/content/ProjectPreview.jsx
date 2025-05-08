@@ -55,10 +55,10 @@ function ProjectPreview() {
                         cert={project.certificate}
                     />
                 ))}
-
             </div>
         </div>
     )
 }
 
+export { projects}
 export default ProjectPreview
