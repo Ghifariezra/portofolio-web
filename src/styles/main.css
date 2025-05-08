@@ -68,7 +68,7 @@
     }
 
     .profile-name {
-        @apply text-sm md:text-sm lg:text-base xl:text-lg 2xl:text-xl font-medium tracking-wider
+        @apply text-md md:text-sm lg:text-base xl:text-lg 2xl:text-xl font-bold tracking-wider
     }
 
     .profile-role {
