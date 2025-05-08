@@ -6,9 +6,9 @@
 }
 
 @layer base {
-    * {
+    /* * {
         border: red 0.5px solid;
-    }
+    } */
 }
 
 @layer components {
