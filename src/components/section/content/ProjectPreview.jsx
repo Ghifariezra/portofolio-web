@@ -42,7 +42,7 @@ function ProjectPreview() {
     return (
         <div className='project-content'>
             <div className='head-project' data-aos="fade-up">
-                <h1 className='text-project'>Project Preview</h1>
+                <h1 className='text-project'>Projects</h1>
             </div>
             <div className='wrapper-card'>
                 {projects.map((project, index) => (
