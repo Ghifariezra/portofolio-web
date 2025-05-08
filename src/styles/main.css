@@ -34,11 +34,11 @@
     }
 
     .menu-item {
-        @apply flex items-center focus-within:bg-sky-200 focus-within:opacity-80 focus-within:rounded-lg focus-within:cursor-pointer focus-within:text-sky-500 px-2 sm:px-3 sm:py-0.5 md:px-4 lg:px-5 lg:hover:bg-sky-200 lg:hover:rounded-lg lg:hover:cursor-pointer lg:hover:text-sky-500 xl:px-6 xl:hover:bg-sky-200 xl:hover:rounded-lg xl:hover:cursor-pointer xl:hover:text-sky-500 2xl:px-7 2xl:hover:bg-sky-200 2xl:hover:rounded-lg 2xl:hover:cursor-pointer 2xl:hover:text-sky-500 selection:bg-sky-200 selection:text-sky-500 transition-all duration-300 ease-in-out
+        @apply flex items-center focus-within:bg-sky-200 focus-within:opacity-80 focus-within:rounded-lg focus-within:cursor-pointer focus-within:text-sky-500  lg:hover:bg-sky-200 lg:hover:rounded-lg lg:hover:cursor-pointer lg:hover:text-sky-500 xl:hover:bg-sky-200 xl:hover:rounded-lg xl:hover:cursor-pointer xl:hover:text-sky-500 2xl:hover:bg-sky-200 2xl:hover:rounded-lg 2xl:hover:cursor-pointer 2xl:hover:text-sky-500 selection:bg-sky-200 selection:text-sky-500 transition-all duration-300 ease-in-out
     }
 
     .text-item {
-        @apply text-center text-[11px] sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-bold
+        @apply text-center text-[11px] px-0 sm:px-3 sm:py-0.5 md:px-4 lg:px-5 xl:px-6 2xl:px-7 sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-bold
     }
 
     /* Hero */

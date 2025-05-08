@@ -17,10 +17,12 @@ const lazyWithDelay = (factory, ms = 3000) => {
 
 
 const Loader = lazy(() => import("@components/loaders/Loader"));
-const Root = lazyWithDelay(() => import("@layout/MainLayout"), 1000);
-const Home = lazyWithDelay(() => import("@pages/Home"), 1000);
-const Certificate = lazyWithDelay(() => import("@pages/Certificate"), 1000);
-const Contact = lazyWithDelay(() => import("@pages/Contact"), 1000);
+const Root = lazy(() => import("@layout/MainLayout"));
+const Home = lazy(() => import("@pages/Home"));
+const NotFound = lazy(() => import("@pages/NotFound"));
+const Certificate = lazy(() => import("@pages/Certificate"));
+const Contact = lazy(() => import("@pages/Contact"));
+const Project = lazy(() => import("@pages/Project"));
 
 const router = createBrowserRouter([
     {
@@ -28,8 +30,10 @@ const router = createBrowserRouter([
         Component: Root,
         children: [
             { index: true, Component: Home },
+            { path: "project", Component: Project },
             { path: "certificate", Component: Certificate },
             { path: "contact", Component: Contact },
+            { path: "*", Component: NotFound },
         ]
     },
 ]);
