@@ -1,9 +1,10 @@
 import { StrictMode } from "react";
+import ProjectComponent from "@section/Project";
 
 function Project() {
   return (
     <StrictMode>
-        <h1 className="text-3xl font-bold underline">Project</h1>
+      <ProjectComponent />
     </StrictMode>
   )
 }

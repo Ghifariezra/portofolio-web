@@ -2,7 +2,7 @@ import { useState } from 'react'
 import GIT from '@assets/git.svg'
 import CERTIFICATE from '@assets/certificate.png'
 
-function ProjectCard({ image, title, techStack, url, cert }) {
+function ProjectCardPreview({ image, title, techStack, url, cert }) {
     const [isHover, setIsHover] = useState(false)
 
     return (
@@ -43,4 +43,4 @@ function ProjectCard({ image, title, techStack, url, cert }) {
     )
 }
 
-export default ProjectCard
+export default ProjectCardPreview

@@ -1,13 +1,13 @@
 import { StrictMode } from "react";
 import Hero from "@section/Hero"
-import Project from "@section/Project"
+import Preview from "@section/ProjectPreview"
 
 
 function Home() {
   return (
     <StrictMode>
       <Hero />
-      <Project />
+      <Preview />
     </ StrictMode>
   )
 }

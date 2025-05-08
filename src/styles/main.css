@@ -6,9 +6,9 @@
 }
 
 @layer base {
-    /* * {
-        border: red 1px solid;
-    } */
+    * {
+        border: red 0.5px solid;
+    }
 }
 
 @layer components {
@@ -38,7 +38,7 @@
     }
 
     .text-item {
-        @apply text-center text-[11px] px-0 sm:px-3 sm:py-0.5 md:px-4 lg:px-5 xl:px-6 2xl:px-7 sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-bold
+        @apply text-center text-[12px] px-2 sm:px-3 sm:py-0.5 md:px-4 lg:px-5 xl:px-6 2xl:px-7 sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-bold
     }
 
     /* Hero */
@@ -124,7 +124,7 @@
     }
 
     /* Projects */
-    .project-section {
+    .project-section-preview {
         @apply mx-auto select-none bg-sky-100 pt-6 pb-10 overflow-hidden
     }
 

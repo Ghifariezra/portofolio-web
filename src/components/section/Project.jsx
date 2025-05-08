@@ -1,12 +1,12 @@
 import { useState } from 'react'
-import ProjectComponents from '@section/content/Project'
+import Project from '@section/content/Project'
 
-function Project() {
+function ProjectComponent() {
     return (
-        <section id='project' className='project-section'>
-            <ProjectComponents />
+        <section className='container mx-auto select-none'>
+            <Project />
         </section>
     )
 }
 
-export default Project
+export default ProjectComponent
