@@ -21,7 +21,7 @@ function HeroComponents() {
         className='hero-image group'>
         <img src={PROFILE3D} alt="profile" className=' profile' />
         <div className='profile-gradient'></div>
-        <div className='profile-overlay' onClick={toggleModal}>
+        <div className='profile-overlay'>
           <h3 className='profile-name'>Ghifari Ezra Ramadhan</h3>
           <p className='profile-role'>Fullstack & Data Enthusiast</p>
         </div>

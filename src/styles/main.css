@@ -56,15 +56,15 @@
 
 
     .profile {
-        @apply h-full object-cover object-top group-hover:scale-105 transition-transform duration-300 ease-in
+        @apply h-full object-cover object-top group-active:scale-105 sm:group-hover:scale-105 transition-transform duration-300 ease-in
     }
 
     .profile-gradient {
-        @apply absolute inset-0 bg-gradient-to-t from-sky-700/70 to-transparent group-hover:from-sky-700/80 transition-all duration-300
+        @apply absolute inset-0 bg-gradient-to-t from-sky-700/70 to-transparent group-active:from-sky-700/80 sm:group-hover:from-sky-700/80 transition-all duration-300
     }
 
     .profile-overlay {
-        @apply absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300
+        @apply absolute bottom-4 left-4 text-white opacity-0 group-active:opacity-100 sm:group-hover:opacity-100 transition-opacity duration-300
     }
 
     .profile-name {
