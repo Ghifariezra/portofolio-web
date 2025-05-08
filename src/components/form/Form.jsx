@@ -4,7 +4,7 @@ import React from "react";
 const Form = () => {
     return (
         <div className="flex justify-center items-center h-screen">
-            <div className="bg-white rounded-lg shadow-lg p-6 w-96">
+            <div className="bg-white rounded-lg shadow-lg p-8 w-80 sm:p-6 sm:w-96">
                 <h2 className="text-2xl font-bold mb-4">Contact Us</h2>
                 <form>
                     <div className="mb-4">

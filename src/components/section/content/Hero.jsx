@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import Form from '@components/form/Form'
 import PROFILE from '@assets/profile.jpeg'
 import PROFILE3D from '@assets/avatar-profile.png'
@@ -12,7 +12,21 @@ const skills = [JS, REACT, TAILWIND, VITE];
 function HeroComponents() {
   const [isOpen, setIsOpen] = useState(false);
   const toggleModal = () => setIsOpen(!isOpen);
-  
+
+  const modalRef = useRef();
+
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      // Jika modal terbuka dan klik di luar form/modal box, tutup
+      if (isOpen && modalRef.current && !modalRef.current.contains(e.target)) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [isOpen]);
+
   return (
     <div
       className='hero-content'>
@@ -44,13 +58,13 @@ function HeroComponents() {
           onClick={toggleModal}>
           Send message <span className='envelope'>📩</span>
         </button>
-        {
-          isOpen && (
-            <div className='bg-slate-500/50 w-full h-full fixed top-0 left-0 z-100'>
+        {isOpen && (
+          <div className='fixed inset-0 z-50 bg-sky-800/50 flex items-center justify-center'>
+            <div ref={modalRef}>
               <Form />
             </div>
-          )
-        }
+          </div>
+        )}
       </div>
       <div className='skills'>
         <h1 className='tech-stack' data-aos="flip-up">Tech Stack</h1>
