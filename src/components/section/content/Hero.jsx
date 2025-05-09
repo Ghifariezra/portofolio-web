@@ -2,10 +2,10 @@ import { useState, useEffect, useRef } from 'react'
 import Form from '@components/form/Form'
 import PROFILE from '@assets/profile.jpeg'
 import PROFILE3D from '@assets/avatar-profile.png'
-import TAILWIND from '@assets/techStack/tailwind.svg'
-import JS from '@assets/techStack/javascript.svg'
-import REACT from '@assets/techStack/react.svg'
-import VITE from '@assets/techStack/vite.svg'
+import TAILWIND from '@assets/techstack/tailwind.svg'
+import JS from '@assets/techstack/javascript.svg'
+import REACT from '@assets/techstack/react.svg'
+import VITE from '@assets/techstack/vite.svg'
 
 const skills = [JS, REACT, TAILWIND, VITE];
 
