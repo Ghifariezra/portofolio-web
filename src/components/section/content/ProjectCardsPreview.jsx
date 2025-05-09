@@ -2,7 +2,7 @@ import { useState } from 'react'
 import GIT from '@assets/techstack/git.svg'
 import iconCertificate from '@assets/certificate.png'
 
-function ProjectCardPreview({ image, title, techStack, url, certificate }) {
+function ProjectCardPreview({ image, title, techStack, sourceCode, certificate }) {
     const [isHover, setIsHover] = useState(false)
 
     return (
@@ -23,7 +23,7 @@ function ProjectCardPreview({ image, title, techStack, url, certificate }) {
             </div>
             <div className="wrapper-content-card">
                 <div className='wrapper-source'>
-                    <a href={url} target='_blank' className='group' data-aos="fade-left">
+                    <a href={sourceCode} target='_blank' className='group' data-aos="fade-left">
                         {/* <div style={{ backgroundImage: `url(${GIT})` }} className='hover-git'>
                         </div> */}
                         <h1 className='text-sky-700 text-[9px] underline italic font-bold tracking-wider lg:group-hover:text-sm'>Source Code</h1>
