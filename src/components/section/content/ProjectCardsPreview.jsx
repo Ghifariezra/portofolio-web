@@ -26,7 +26,7 @@ function ProjectCardPreview({ image, title, techStack, url, certificate }) {
                     <a href={url} target='_blank' className='group' data-aos="fade-left">
                         {/* <div style={{ backgroundImage: `url(${GIT})` }} className='hover-git'>
                         </div> */}
-                        <h1 className='text-sky-700 text-[9px] sm:text-sm underline font-bold'>Source Code</h1>
+                        <h1 className='text-sky-700 text-[9px] underline italic font-bold tracking-wider'>Source Code</h1>
                     </a>
                     {/* <div onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)} style={{ backgroundImage: `url(${iconCertificate})` }} className='trigger-certif' data-aos="fade-left">
                     </div> */}

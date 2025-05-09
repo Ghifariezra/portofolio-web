@@ -149,7 +149,7 @@
     }
 
     .img-project {
-        @apply w-full h-60 bg-center bg-cover hover:drop-shadow-sky-400/25 hover:drop-shadow-xl hover:-translate-y-4 hover:scale-110 transition-all duration-300 ease-in rounded-2xl overflow-hidden relative
+        @apply w-full h-60 bg-center bg-cover drop-shadow-sky-700/10 drop-shadow-sm hover:drop-shadow-sky-400/25 hover:drop-shadow-xl hover:-translate-y-4 hover:scale-110 transition-all duration-300 ease-in rounded-2xl overflow-hidden relative
     }
 
     .wrapper-preview {
