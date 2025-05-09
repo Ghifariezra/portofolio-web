@@ -2,10 +2,10 @@ import { useState, useEffect, useRef } from 'react'
 import Form from '@components/form/Form'
 import PROFILE from '@assets/profile.jpeg'
 import PROFILE3D from '@assets/avatar-profile.png'
-import TAILWIND from '@assets/tailwind.svg'
-import JS from '@assets/javascript.svg'
-import REACT from '@assets/react.svg'
-import VITE from '@assets/vite.svg'
+import TAILWIND from '@assets/techStack/tailwind.svg'
+import JS from '@assets/techStack/javascript.svg'
+import REACT from '@assets/techStack/react.svg'
+import VITE from '@assets/techStack/vite.svg'
 
 const skills = [JS, REACT, TAILWIND, VITE];
 
@@ -61,7 +61,7 @@ function HeroComponents() {
         {isOpen && (
           <div className='fixed inset-0 z-50 bg-sky-800/50 flex items-center justify-center'>
             <div ref={modalRef}>
-              <Form toggleModal={toggleModal} />
+              <Form closeModal={toggleModal} />
             </div>
           </div>
         )}

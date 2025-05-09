@@ -1,64 +1,101 @@
+import { useState } from 'react'
 import ProjectCardPreview from '@section/content/ProjectCardsPreview'
+import TAILWIND from '@assets/techStack/tailwind.svg'
+import JS from '@assets/techStack/javascript.svg'
+import REACT from '@assets/techStack/react.svg'
+import VITE from '@assets/techStack/vite.svg'
+import GIT from '@assets/techStack/git.svg'
+import PANDAS from '@assets/techStack/pandas.svg'
+import PY from '@assets/techStack/py.svg'
+import SNOWFLAKE from '@assets/techStack/snowflake.svg'
+import PSQL from '@assets/techStack/psql.svg'
+import LOOKER from '@assets/techStack/looker.svg'
+import DOCKER from '@assets/techStack/docker.svg'
+import AIRFLOW from '@assets/techStack/airflow.svg'
+import DBT from '@assets/techStack/dbt.svg'
 import DE_CERTIFICATE from '@assets/DE-Certificate.png'
-import TAILWIND from '@assets/tailwind.svg'
-import JS from '@assets/javascript.svg'
-import REACT from '@assets/react.svg'
-import VITE from '@assets/vite.svg'
-import WEBPORTO from '@assets/web-portofolio.png'
+import FE_CERTIFICATE from '@assets/web-portofolio.png'
+import ETL from '@assets/ETL.png'
+import ELT from '@assets/ELT.png'
+import BATCH from '@assets/batch-processing.jpg'
 
-const techStackWebPortofolio = [JS, TAILWIND, REACT, VITE]
-const projects = [
-    {
-        image: WEBPORTO,
-        title: 'Portofolio Website',
-        techStack: techStackWebPortofolio,
-        url: 'https://github.com/Ghifariezra',
-        certificate: DE_CERTIFICATE,
+const techStack = {
+    web: [JS, TAILWIND, REACT, VITE],
+    data: {
+        ETL: [PY, PSQL, LOOKER],
+        ELT:[GIT, PANDAS, SNOWFLAKE, DBT, LOOKER],
+        batchProcessing: [PSQL, DOCKER, AIRFLOW, PANDAS, SNOWFLAKE, DBT, LOOKER],
     },
-    {
-        image: WEBPORTO,
-        title: 'Portofolio Website',
-        techStack: techStackWebPortofolio,
-        url: 'https://github.com/Ghifariezra',
-        certificate: DE_CERTIFICATE,
-    },
-    {
-        image: WEBPORTO,
-        title: 'Portofolio Website',
-        techStack: techStackWebPortofolio,
-        url: 'https://github.com/Ghifariezra',
-        certificate: DE_CERTIFICATE,
-    },
-    {
-        image: WEBPORTO,
-        title: 'Portofolio Website',
-        techStack: techStackWebPortofolio,
-        url: 'https://github.com/Ghifariezra',
-        certificate: DE_CERTIFICATE,
-    },
-]
-
-function ProjectPreview() {
-    return (
-        <div className='project-content'>
-            <div className='head-project' data-aos="fade-up">
-                <h1 className='text-project'>Projects</h1>
-            </div>
-            <div className='wrapper-card'>
-                {projects.map((project, index) => (
-                    <ProjectCardPreview
-                        key={index}
-                        image={project.image}
-                        title={project.title}
-                        techStack={project.techStack}
-                        url={project.url}
-                        cert={project.certificate}
-                    />
-                ))}
-            </div>
-        </div>
-    )
 }
 
-export { projects}
+const projects = [
+    {
+      image: FE_CERTIFICATE,
+      title: 'Portofolio Website',
+      techStack: techStack.web,
+      url: 'https://github.com/Ghifariezra',
+      certificate: DE_CERTIFICATE,
+      category: 'Web',
+    },
+    {
+      image: ETL,
+      title: 'ETL',
+      techStack: techStack.data.ETL,
+      url: 'https://github.com/Ghifariezra/digitalskola-dataeng/tree/main/Project/etl-project',
+      certificate: DE_CERTIFICATE,
+      category: 'Data',
+    },
+    {
+      image: ELT,
+      title: 'ELT',
+      techStack: techStack.data.ELT,
+      url: 'https://github.com/https://github.com/Ghifariezra/digitalskola-dataeng/tree/main/Project/elt-project',
+      certificate: DE_CERTIFICATE,
+      category: 'Data',
+    },
+    {
+      image: BATCH,
+      title: 'Batch Processing',
+      techStack: techStack.data.batchProcessing,
+      url: 'https://github.com/Ghifariezra/digitalskola-dataeng/tree/main/Project/airflow-dbt-docker',
+      certificate: DE_CERTIFICATE,
+      category: 'Data',
+    },
+  ]
+function ProjectPreview() {
+  const catalog = ['Web', 'All', 'Data']
+  const [active, setActive] = useState('All')
+  const filterProject = active === 'All' ? projects : projects.filter((item) => item.category === active)
+
+  return (
+    <div className="project-content">
+      <div className="head-project" data-aos="fade-up">
+        <h1 className="text-project">Projects</h1>
+      </div>
+
+      <div className="category-project flex flex-row gap-4 justify-center items-center p-6">
+        {catalog.map((item, index) => (
+          <div
+            key={index}
+            onClick={() => setActive(item)}
+            className={`category-item px-4 py-1 text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl sm:px-8 sm:py-1 rounded-2xl cursor-pointer transition-all duration-200
+              ${
+                active === item
+                  ? 'bg-sky-500 text-white font-bold'
+                  : 'bg-white text-sky-500 hover:bg-sky-500 hover:text-white'
+              }`}
+          >
+            {item}
+          </div>
+        ))}
+      </div>
+      <div className="wrapper-card">
+        { filterProject.map((item, index) => (
+          <ProjectCardPreview key={index} {...item} />
+        ))}
+      </div>
+    </div>
+  )
+}
+
 export default ProjectPreview
