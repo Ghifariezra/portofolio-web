@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import GIT from '@assets/techStack/git.svg'
+import GIT from '@assets/techstack/git.svg'
 import iconCertificate from '@assets/certificate.png'
 
 function ProjectCardPreview({ image, title, techStack, url, certificate }) {
