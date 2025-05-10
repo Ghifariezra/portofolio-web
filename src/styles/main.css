@@ -127,7 +127,7 @@
 
     /* Projects */
     .project-section-preview {
-        @apply mx-auto select-none bg-sky-100 p-6 overflow-hidden
+        @apply mx-auto select-none bg-sky-100 pt-4 pb-10 overflow-hidden
     }
 
     .project-content {
@@ -143,7 +143,7 @@
     }
 
     .wrapper-card {
-        @apply grid gap-5 p-4 md:grid-cols-2
+        @apply grid gap-5 md:grid-cols-2
     }
 
     .card-project {
@@ -207,6 +207,6 @@
     }
 
     .btn-more {
-        @apply m-3 px-4 py-1 bg-blue-500 text-white rounded-md text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl group-hover:bg-blue-600 group-hover:-translate-y-4 transition-all duration-300 ease-in font-bold cursor-pointer tracking-wider
+        @apply mt-9 px-4 py-1 bg-blue-500 text-white rounded-md text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl group-hover:bg-blue-600 group-hover:-translate-y-4 transition-all duration-300 ease-in font-bold cursor-pointer tracking-wider
     }
 }
