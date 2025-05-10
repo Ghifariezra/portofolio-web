@@ -40,7 +40,16 @@ const Form = ({ closeModal }) => {
         }
 
         // ✅ Kirim form HTML ke EmailJS
-        emailjs.sendForm(serviceID, templateID, formRef.current, publicKey)
+        emailjs
+            .sendForm(serviceID, templateID, formRef.current, publicKey)
+            .then(() => {
+                alert("Pesan berhasil dikirim!");
+                closeModal();
+            })
+            .catch((err) => {
+                console.error("Gagal kirim:", err);
+                alert("Gagal mengirim pesan.");
+            });
     };
 
     return (
