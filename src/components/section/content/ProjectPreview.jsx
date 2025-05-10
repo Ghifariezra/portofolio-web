@@ -65,8 +65,13 @@ const projects = [
 ]
 function ProjectPreview() {
   const catalog = ['Web', 'All', 'Data']
+  const [seeMore, setSeeMore] = useState(false)
   const [active, setActive] = useState('All')
   const filterProject = active === 'All' ? projects : projects.filter((item) => item.category === active)
+
+  const handleSeeMore = () => {
+    setSeeMore(!seeMore)
+  }
 
   return (
     <div className="project-content">
@@ -90,9 +95,31 @@ function ProjectPreview() {
         ))}
       </div>
       <div className="wrapper-card">
-        {filterProject.map((item, index) => (
+        {/* {filterProject.map((item, index) => (
           <ProjectCardPreview key={index} {...item} />
-        ))}
+        ))} */}
+        {/* {
+          projects.length > 3 ? projects.slice(0, 3).map((item, index) => (
+            <ProjectCardPreview key={index} {...item} />
+          )) : projects.map((item, index) => (
+            <ProjectCardPreview key={index} {...item} />
+          ))
+        } */}
+        {
+          seeMore ? filterProject.map((item, index) => (
+            <ProjectCardPreview key={index} {...item} />
+          )) : filterProject.slice(0, 2).map((item, index) => (
+            <ProjectCardPreview key={index} {...item} />
+          ))
+        }
+      </div>
+      <div className='flex justify-center items-center mx-auto w-fit group'>
+        <button 
+          className='btn-more'
+          onClick={handleSeeMore}
+        >
+          See More
+        </button>
       </div>
     </div>
   )

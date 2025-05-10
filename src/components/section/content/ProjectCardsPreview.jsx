@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import GIT from '@assets/techstack/git.svg'
-import iconCertificate from '@assets/certificate.png'
+import PREVIEW from '@assets/search.png'
 
 function ProjectCardPreview({ image, title, techStack, sourceCode, livePreview, certificate }) {
     const [isHover, setIsHover] = useState(false)
@@ -17,7 +17,9 @@ function ProjectCardPreview({ image, title, techStack, sourceCode, livePreview, 
                             <a href={livePreview} target='_blank'>
                                 <div className="wrapper-preview">
                                     <h1 className="text-preview">
-                                        <span className='bounce-preview'>👀</span> Live Preview
+                                        <span className='bounce-preview'>
+                                            <img src={PREVIEW} alt="" className='hover-git' />
+                                        </span> Live Preview
                                     </h1>
                                 </div>
                                 {/* {isHover && (<div className='hover-certif' style={{ backgroundImage: `url(${certificate})` }}>
@@ -27,8 +29,8 @@ function ProjectCardPreview({ image, title, techStack, sourceCode, livePreview, 
                             <a href={sourceCode} target='_blank'>
                                 <div className="wrapper-preview">
                                     <h1 className="text-preview">
-                                        <span class=" bounce-preview">
-                                            <img src={GIT} alt="" className='hover-git'/>
+                                        <span className="bounce-preview">
+                                            <img src={GIT} alt="" className='hover-git' />
                                         </span> Source Code
                                     </h1>
                                 </div>
