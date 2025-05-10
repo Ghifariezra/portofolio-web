@@ -34,6 +34,7 @@ const projects = [
     title: 'Portofolio Website',
     techStack: techStack.web,
     sourceCode: 'https://github.com/Ghifariezra/portofolio-web',
+    livePreview: '/',
     certificate: DE_CERTIFICATE,
     category: 'Web',
   },

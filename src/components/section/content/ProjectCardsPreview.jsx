@@ -2,34 +2,50 @@ import { useState } from 'react'
 import GIT from '@assets/techstack/git.svg'
 import iconCertificate from '@assets/certificate.png'
 
-function ProjectCardPreview({ image, title, techStack, sourceCode, certificate }) {
+function ProjectCardPreview({ image, title, techStack, sourceCode, livePreview, certificate }) {
     const [isHover, setIsHover] = useState(false)
 
     return (
         <div className="card-project" data-aos="fade-left">
-            <div
-                className="img-project group"
-                style={{ backgroundImage: `url(${image})` }} data-aos="zoom-out" data-aos-delay="600"
-            >
-                <a href="/">
-                    <div className="wrapper-preview">
-                        <h1 className="text-preview">
-                            <span className='bounce-preview'>👀</span> Live Preview
-                        </h1>
-                    </div>
-                    {/* {isHover && (<div className='hover-certif' style={{ backgroundImage: `url(${certificate})` }}>
+            <div className='group'>
+                <div
+                    className="img-project group"
+                    style={{ backgroundImage: `url(${image})` }} data-aos="zoom-out" data-aos-delay="600"
+                >
+                    {
+                        livePreview ? (
+                            <a href={livePreview} target='_blank'>
+                                <div className="wrapper-preview">
+                                    <h1 className="text-preview">
+                                        <span className='bounce-preview'>👀</span> Live Preview
+                                    </h1>
+                                </div>
+                                {/* {isHover && (<div className='hover-certif' style={{ backgroundImage: `url(${certificate})` }}>
                     </div>)} */}
-                </a>
+                            </a>
+                        ) : (
+                            <a href={sourceCode} target='_blank'>
+                                <div className="wrapper-preview">
+                                    <h1 className="text-preview">
+                                        <span class=" bounce-preview">
+                                            <img src={GIT} alt="" className='hover-git'/>
+                                        </span> Source Code
+                                    </h1>
+                                </div>
+                            </a>
+                        )
+                    }
+                </div>
             </div>
             <div className="wrapper-content-card">
                 <div className='wrapper-source'>
-                    <a href={sourceCode} target='_blank' className='group' data-aos="fade-left">
-                        {/* <div style={{ backgroundImage: `url(${GIT})` }} className='hover-git'>
-                        </div> */}
-                        <h1 className='text-sky-700 text-[9px] underline italic font-bold tracking-wider lg:group-hover:text-sm'>Source Code</h1>
-                    </a>
-                    {/* <div onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)} style={{ backgroundImage: `url(${iconCertificate})` }} className='trigger-certif' data-aos="fade-left">
-                    </div> */}
+                    {
+                        livePreview ? (
+                            <a href={sourceCode} target='_blank' className='group' data-aos="fade-left">
+                                <h1 className='text-sky-700 text-[9px] underline italic font-bold tracking-wider lg:group-hover:text-sm'>Source Code</h1>
+                            </a>
+                        ) : (null)
+                    }
                 </div>
                 <h1 className="head-card" data-aos="fade-left">{title}</h1>
                 <hr className="head-line" data-aos="fade-left" />
