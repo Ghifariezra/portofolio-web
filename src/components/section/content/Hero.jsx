@@ -52,7 +52,7 @@ function HeroComponents() {
           className='text-description' data-aos="flip-up">
           I'm a university student at Universitas Pancasila, currently exploring the world of full-stack web development. With a strong passion for technology, I’m committed to continuous learning and building digital solutions that are both efficient and meaningful. I believe that technology is not just a tool, but a bridge to solving real-world problems. I’m always open to collaboration, innovation, and new challenges in the web development space.
         </p>
-        <div className='flex justify-center group'>
+        <div className='field-message group'>
           <button
             data-aos="flip-up"
             className='btn-message'
@@ -61,7 +61,7 @@ function HeroComponents() {
           </button>
         </div>
         {isOpen && (
-          <div className='fixed inset-0 z-50 bg-sky-800/50 flex items-center justify-center'>
+          <div className='wrapper-modal'>
             <div ref={modalRef}>
               <Form closeModal={toggleModal} />
             </div>

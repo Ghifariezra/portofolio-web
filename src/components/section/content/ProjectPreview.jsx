@@ -88,7 +88,7 @@ function ProjectPreview() {
           <div
             key={index}
             onClick={() => setActive(item)}
-            className={`category-item px-4 py-1 text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl sm:px-8 sm:py-1 rounded-2xl cursor-pointer transition-all duration-200
+            className={`category-item
               ${active === item
                 ? 'bg-sky-500 text-white font-bold'
                 : 'bg-white text-sky-500 hover:bg-sky-500 hover:text-white'
@@ -117,7 +117,7 @@ function ProjectPreview() {
           ))
         }
       </div>
-      <div className='flex justify-center items-center mx-auto w-fit group'>
+      <div className='field-more group'>
         <button 
           className='btn-more'
           onClick={handleSeeMore}

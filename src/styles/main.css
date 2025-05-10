@@ -105,12 +105,20 @@
         @apply p-4 text-sm text-justify md:text-base lg:text-lg xl:text-xl 2xl:text-2xl text-slate-700 font-light tracking-wider
     }
 
+    .field-message {
+        @apply flex justify-center
+    }
+
     .btn-message {
         @apply mt-6 px-4 py-2 w-full bg-blue-500 text-white rounded-md text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl group-hover:bg-blue-600 group-hover:-translate-y-4 transition-all duration-300 ease-in font-bold cursor-pointer tracking-wider
     }
 
     .envelope {
         @apply inline-block ml-2 animate-bounce scale-125 group-hover:scale-150 group-hover:rotate-12 transition-all duration-300
+    }
+
+    .wrapper-modal{
+        @apply fixed inset-0 z-50 bg-sky-800/50 flex items-center justify-center
     }
 
     .skills {
@@ -142,6 +150,10 @@
         @apply text-center text-white text-xl lg:text-3xl 2xl:text-4xl font-bold tracking-wider
     }
 
+    .category-item {
+        @apply px-4 py-1 text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl sm:px-8 sm:py-1 rounded-2xl cursor-pointer transition-all duration-200
+    }
+
     .wrapper-card {
         @apply grid gap-5 md:grid-cols-2
     }
@@ -157,6 +169,7 @@
     .status-project {
         @apply hidden group-hover:block bg-sky-900/50 rounded-br-2xl w-18
     }
+
     .status {
         @apply text-white px-2 py-1 text-[12px] font-bold tracking-wider text-center
     }
@@ -211,6 +224,10 @@
 
     .ratio-stack {
         @apply w-6 h-6
+    }
+
+    .field-more {
+        @apply flex justify-center items-center mx-auto w-fit
     }
 
     .btn-more {
