@@ -56,7 +56,7 @@ function HeroComponents() {
           data-aos="flip-up"
           className='btn-message group'
           onClick={toggleModal}>
-          Send message <span className='envelope'>📩</span>
+          Send Email Message <span className='envelope'>📩</span>
         </button>
         {isOpen && (
           <div className='fixed inset-0 z-50 bg-sky-800/50 flex items-center justify-center'>

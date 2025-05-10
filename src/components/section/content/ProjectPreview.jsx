@@ -20,48 +20,48 @@ import ELT from '@assets/ELT.png'
 import BATCH from '@assets/batch-processing.jpg'
 
 const techStack = {
-    web: [JS, TAILWIND, REACT, VITE],
-    data: {
-        ETL: [PY, PSQL, LOOKER],
-        ELT:[GIT, PANDAS, SNOWFLAKE, DBT, LOOKER],
-        batchProcessing: [PSQL, DOCKER, AIRFLOW, PANDAS, SNOWFLAKE, DBT, LOOKER],
-    },
+  web: [JS, TAILWIND, REACT, VITE],
+  data: {
+    ETL: [PY, PSQL, LOOKER],
+    ELT: [GIT, PANDAS, SNOWFLAKE, DBT, LOOKER],
+    batchProcessing: [PSQL, DOCKER, AIRFLOW, PANDAS, SNOWFLAKE, DBT, LOOKER],
+  },
 }
 
 const projects = [
-    {
-      image: FE_CERTIFICATE,
-      title: 'Portofolio Website',
-      techStack: techStack.web,
-      sourceCode: 'https://github.com/Ghifariezra/portofolio-web',
-      certificate: DE_CERTIFICATE,
-      category: 'Web',
-    },
-    {
-      image: ETL,
-      title: 'ETL',
-      techStack: techStack.data.ETL,
-      sourceCode: 'https://github.com/Ghifariezra/digitalskola-dataeng/tree/main/Project/etl-project',
-      certificate: DE_CERTIFICATE,
-      category: 'Data',
-    },
-    {
-      image: ELT,
-      title: 'ELT',
-      techStack: techStack.data.ELT,
-      sourceCode: 'https://github.com/Ghifariezra/digitalskola-dataeng/tree/main/Project/elt-project/elt-snowflake',
-      certificate: DE_CERTIFICATE,
-      category: 'Data',
-    },
-    {
-      image: BATCH,
-      title: 'Batch Processing',
-      techStack: techStack.data.batchProcessing,
-      sourceCode: 'https://github.com/Ghifariezra/digitalskola-dataeng/tree/main/Project/airflow-dbt-docker',
-      certificate: DE_CERTIFICATE,
-      category: 'Data',
-    },
-  ]
+  {
+    image: FE_CERTIFICATE,
+    title: 'Portofolio Website',
+    techStack: techStack.web,
+    sourceCode: 'https://github.com/Ghifariezra/portofolio-web',
+    certificate: DE_CERTIFICATE,
+    category: 'Web',
+  },
+  {
+    image: ETL,
+    title: 'ETL',
+    techStack: techStack.data.ETL,
+    sourceCode: 'https://github.com/Ghifariezra/digitalskola-dataeng/tree/main/Project/etl-project',
+    certificate: DE_CERTIFICATE,
+    category: 'Data',
+  },
+  {
+    image: ELT,
+    title: 'ELT',
+    techStack: techStack.data.ELT,
+    sourceCode: 'https://github.com/Ghifariezra/digitalskola-dataeng/tree/main/Project/elt-project/elt-snowflake',
+    certificate: DE_CERTIFICATE,
+    category: 'Data',
+  },
+  {
+    image: BATCH,
+    title: 'Batch Processing',
+    techStack: techStack.data.batchProcessing,
+    sourceCode: 'https://github.com/Ghifariezra/digitalskola-dataeng/tree/main/Project/airflow-dbt-docker',
+    certificate: DE_CERTIFICATE,
+    category: 'Data',
+  },
+]
 function ProjectPreview() {
   const catalog = ['Web', 'All', 'Data']
   const [active, setActive] = useState('All')
@@ -79,10 +79,9 @@ function ProjectPreview() {
             key={index}
             onClick={() => setActive(item)}
             className={`category-item px-4 py-1 text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl sm:px-8 sm:py-1 rounded-2xl cursor-pointer transition-all duration-200
-              ${
-                active === item
-                  ? 'bg-sky-500 text-white font-bold'
-                  : 'bg-white text-sky-500 hover:bg-sky-500 hover:text-white'
+              ${active === item
+                ? 'bg-sky-500 text-white font-bold'
+                : 'bg-white text-sky-500 hover:bg-sky-500 hover:text-white'
               }`}
           >
             {item}
@@ -90,7 +89,7 @@ function ProjectPreview() {
         ))}
       </div>
       <div className="wrapper-card">
-        { filterProject.map((item, index) => (
+        {filterProject.map((item, index) => (
           <ProjectCardPreview key={index} {...item} />
         ))}
       </div>

@@ -1,25 +1,55 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react"; // pakai useRef
+import emailjs from "@emailjs/browser";
+
+const serviceID = import.meta.env.VITE_SERVICE_ID;
+const templateID = import.meta.env.VITE_TEMPLATE_ID;
+const publicKey = import.meta.env.VITE_PUBLIC_KEY;
 
 const Form = ({ closeModal }) => {
     const [formData, setFormData] = useState({
         name: "",
         email: "",
-        message: ""
+        subject: "",
+        time: new Date().toLocaleString(),
+        message: "",
     });
+
+    const formRef = useRef(); // 🔑 inilah ref-nya
 
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData((prev) => ({
             ...prev,
-            [name]: value
+            [name]: value,
         }));
     };
 
-    const fetchDataForm = (e) => {
+    const sendEmail = (e) => {
         e.preventDefault();
-        console.log("Form Data:", formData);
-        alert("Data has been sent");
-        // Bisa kirim ke API, reset form, dll.
+
+        const { name, email, message } = formData;
+        if (!name || !email || !message) {
+            alert("Please fill in all fields");
+            return;
+        }
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            alert("Please enter a valid email address");
+            return;
+        }
+
+        // ✅ Kirim form HTML ke EmailJS
+        emailjs
+            .sendForm(serviceID, templateID, formRef.current, publicKey)
+            .then(() => {
+                alert("Pesan berhasil dikirim!");
+                closeModal();
+            })
+            .catch((err) => {
+                console.error("Gagal kirim:", err);
+                alert("Gagal mengirim pesan.");
+            });
     };
 
     return (
@@ -27,14 +57,12 @@ const Form = ({ closeModal }) => {
             <div className="bg-white rounded-lg shadow-lg p-4 w-80 sm:p-6 sm:w-96">
                 <div className="flex justify-between items-center mb-4">
                     <h2 className="text-2xl text-center font-bold">Contact Us</h2>
-                    <span
-                        className="material-symbols-outlined cursor-pointer"
-                        onClick={closeModal}
-                    >
+                    <span className="material-symbols-outlined cursor-pointer" onClick={closeModal}>
                         close
                     </span>
                 </div>
-                <form onSubmit={fetchDataForm}>
+                <form ref={formRef} onSubmit={sendEmail}> {/* 👈 ref di sini */}
+                    <input type="hidden" name="time" value={formData.time} />
                     <div className="mb-4">
                         <label className="block text-gray-700 font-medium mb-2">Name</label>
                         <input
@@ -42,8 +70,9 @@ const Form = ({ closeModal }) => {
                             name="name"
                             value={formData.name}
                             onChange={handleChange}
-                            placeholder="Your Name"
-                            className="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            placeholder="Jane Doe"
+                            className="w-full px-3 py-2 border rounded"
+                            required
                         />
                     </div>
                     <div className="mb-4">
@@ -53,8 +82,20 @@ const Form = ({ closeModal }) => {
                             name="email"
                             value={formData.email}
                             onChange={handleChange}
-                            placeholder="Your Email"
-                            className="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            placeholder="janedoe@gmail.com"
+                            className="w-full px-3 py-2 border rounded"
+                            required
+                        />
+                    </div>
+                    <div className="mb-4">
+                        <label className="block text-gray-700 font-medium mb-2">Subject</label>
+                        <input
+                            type="text"
+                            name="subject"
+                            value={formData.subject}
+                            onChange={handleChange}
+                            placeholder="Subject of your message"
+                            className="w-full px-3 py-2 border rounded"
                         />
                     </div>
                     <div className="mb-4">
@@ -64,13 +105,14 @@ const Form = ({ closeModal }) => {
                             value={formData.message}
                             onChange={handleChange}
                             placeholder="Your Message"
-                            className="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            className="w-full px-3 py-2 border rounded"
                             rows="4"
+                            required
                         ></textarea>
                     </div>
                     <button
                         type="submit"
-                        className="w-full bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition"
+                        className="w-full bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
                     >
                         Send Me
                     </button>
