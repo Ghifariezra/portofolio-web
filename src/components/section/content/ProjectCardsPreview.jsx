@@ -2,7 +2,7 @@ import { useState } from 'react'
 import GIT from '@assets/techstack/git.svg'
 import PREVIEW from '@assets/search.png'
 
-function ProjectCardPreview({ image, title, techStack, sourceCode, livePreview, certificate }) {
+function ProjectCardPreview({ image, title, techStack, sourceCode, livePreview, certificate, status }) {
     const [isHover, setIsHover] = useState(false)
 
     return (
@@ -11,7 +11,12 @@ function ProjectCardPreview({ image, title, techStack, sourceCode, livePreview, 
                 <div
                     className="img-project group"
                     style={{ backgroundImage: `url(${image})` }} data-aos="zoom-out" data-aos-delay="600"
-                >
+                    >
+                    <div className='status-project'>
+                        <div className='status'>
+                            {status}
+                        </div>
+                    </div>
                     {
                         livePreview ? (
                             <a href={livePreview} target='_blank'>
@@ -22,8 +27,6 @@ function ProjectCardPreview({ image, title, techStack, sourceCode, livePreview, 
                                         </span> Live Preview
                                     </h1>
                                 </div>
-                                {/* {isHover && (<div className='hover-certif' style={{ backgroundImage: `url(${certificate})` }}>
-                    </div>)} */}
                             </a>
                         ) : (
                             <a href={sourceCode} target='_blank'>
