@@ -28,11 +28,11 @@
 
     /* Navbar */
     .nav-section {
-        @apply container mx-auto sticky top-6 z-50 select-none
+        @apply container mx-auto fixed bottom-0 sm:sticky sm:top-6 z-50 select-none
     }
 
     .li-menu {
-        @apply flex items-center justify-between px-2 py-2 bg-linear-to-t from-sky-300/75 to-sky-500/75 text-white rounded-xl mx-4 my-6 sm:px-6 sm:py-4 sm:mx-6 md:px-8 md:mx-8 md:justify-evenly
+        @apply flex items-center justify-between px-2 py-2 bg-linear-to-t from-sky-300/75 to-sky-500/75 text-white rounded-full mx-4 my-6 sm:px-6 sm:py-4 sm:mx-6 md:px-8 md:mx-8 md:justify-evenly
     }
 
     .menu-item {
@@ -143,11 +143,11 @@
     }
 
     .head-project {
-        @apply flex justify-center my-6 w-50 sm:w-80 mx-auto px-8 py-2 bg-sky-400/50 rounded-lg drop-shadow-sm origin-top-left rotate-4 transition-all duration-300 ease-in
+        @apply flex justify-center my-6 w-50 sm:w-80 mx-auto px-8 py-2
     }
 
     .text-project {
-        @apply text-center text-white text-xl lg:text-3xl 2xl:text-4xl font-bold tracking-wider
+        @apply text-center text-sky-700 text-xl lg:text-3xl 2xl:text-4xl font-bold tracking-wider
     }
 
     .category-project {
