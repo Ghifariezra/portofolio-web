@@ -83,7 +83,7 @@ function ProjectPreview() {
         <h1 className="text-project">Projects</h1>
       </div>
 
-      <div className="category-project flex flex-row gap-4 justify-center items-center p-6">
+      <div className="category-project">
         {catalog.map((item, index) => (
           <div
             key={index}

@@ -150,6 +150,10 @@
         @apply text-center text-white text-xl lg:text-3xl 2xl:text-4xl font-bold tracking-wider
     }
 
+    .category-project {
+        @apply flex flex-row gap-4 justify-center items-center p-6
+    }
+
     .category-item {
         @apply px-4 py-1 text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl sm:px-8 sm:py-1 rounded-2xl cursor-pointer transition-all duration-200
     }
