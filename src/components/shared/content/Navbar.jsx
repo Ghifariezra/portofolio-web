@@ -1,6 +1,6 @@
 import { useState } from 'react'
 const RESUME = import.meta.env.VITE_RESUME
-const Contact = import.meta.env.VITE_CONTACT
+const Contact = import.meta.env.VITE_TELEGRAM
 
 function NavbarComponents() {
   const [items] = useState([

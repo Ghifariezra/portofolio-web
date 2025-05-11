@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react'
 import Form from '@components/form/Form'
 import PROFILE3D from '@assets/avatar-profile.png'
 import LINKEDIN from '@assets/linkedin.png'
+import TELEGRAM from '@assets/telegram.png'
 import GIT from '@assets/techstack/git.svg'
 import TAILWIND from '@assets/techstack/tailwind.svg'
 import JS from '@assets/techstack/javascript.svg'
@@ -11,9 +12,14 @@ import VITE from '@assets/techstack/vite.svg'
 const skills = [JS, REACT, TAILWIND, VITE];
 const socialMedia = [
   {
+    name: 'Telegram',
+    icon: TELEGRAM,
+    url: import.meta.env.VITE_TELEGRAM,
+  },
+  {
     name: 'Linkedin',
     icon: LINKEDIN,
-    url: 'https://www.linkedin.com/in/ghifariezraramadhan/',
+    url: import.meta.env.VITE_LINKEDIN,
   },
   {
     name: 'Github',
