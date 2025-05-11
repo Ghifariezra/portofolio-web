@@ -28,7 +28,7 @@
 
     /* Navbar */
     .nav-section {
-        @apply container mx-auto sticky top-6 z-50 select-none
+        @apply mx-auto sticky top-6 z-50 select-none
     }
 
     .li-menu {
@@ -45,7 +45,7 @@
 
     /* Hero */
     .hero-section {
-        @apply container mx-auto select-none
+        @apply mx-auto select-none
     }
 
     .hero-content {
