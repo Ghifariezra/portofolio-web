@@ -33,7 +33,6 @@ function HeroComponents() {
   const toggleModal = () => setIsOpen(!isOpen);
 
   const modalRef = useRef();
-
   useEffect(() => {
     const handleClickOutside = (e) => {
       // Jika modal terbuka dan klik di luar form/modal box, tutup
