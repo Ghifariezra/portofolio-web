@@ -111,7 +111,7 @@ function ProjectPreview() {
           className='btn-more'
           onClick={handleSeeMore}
         >
-          See More
+          See More...
         </button>
       </div>
     </div>

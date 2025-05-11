@@ -143,19 +143,19 @@
     }
 
     .head-project {
-        @apply flex justify-center w-50 my-4 sm:w-80 mx-auto px-8 py-2 border-t border-b border-sky-700/30 rounded-2xl
+        @apply flex justify-center w-50 my-4 sm:w-80 mx-auto px-8 py-2 bg-linear-to-t from-sky-500/75 to-sky-300/75 text-white rounded-full
     }
 
     .text-project {
-        @apply text-center text-sky-600 text-xl lg:text-3xl 2xl:text-4xl font-bold tracking-wider
+        @apply text-center text-xl lg:text-3xl 2xl:text-4xl font-bold tracking-wider
     }
 
     .category-project {
-        @apply flex flex-row gap-4 justify-center items-center p-6
+        @apply flex flex-row gap-4 justify-center items-center p-8
     }
 
     .category-item {
-        @apply px-4 py-1 text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl sm:px-8 sm:py-1 rounded-2xl cursor-pointer transition-all duration-200
+        @apply px-8 py-1 text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl sm:px-12 lg:px-20 sm:py-1 rounded-2xl cursor-pointer transition-all duration-200
     }
 
     .wrapper-card {
@@ -238,7 +238,7 @@
     }
 
     .btn-more {
-        @apply mt-9 px-4 py-1 bg-blue-500 text-white rounded-md text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl group-hover:bg-blue-600 transition-all duration-300 ease-in font-bold cursor-pointer tracking-wider
+        @apply mt-9 px-4 py-1 bg-blue-500 text-white rounded-md text-sm sm:px-16 lg:px-20 md:text-base lg:text-lg xl:text-xl 2xl:text-2xl group-hover:bg-blue-600 transition-all duration-300 ease-in font-bold cursor-pointer tracking-wider
     }
 
     /* Certificate */
