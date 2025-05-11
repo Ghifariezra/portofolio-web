@@ -238,7 +238,7 @@
     }
 
     .btn-more {
-        @apply mt-9 px-4 py-1 bg-blue-500 text-white rounded-md text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl group-hover:bg-blue-600 group-hover:-translate-y-4 transition-all duration-300 ease-in font-bold cursor-pointer tracking-wider
+        @apply mt-9 px-4 py-1 bg-blue-500 text-white rounded-md text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl group-hover:bg-blue-600 transition-all duration-300 ease-in font-bold cursor-pointer tracking-wider
     }
 
     /* Certificate */
