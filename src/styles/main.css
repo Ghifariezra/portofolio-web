@@ -240,7 +240,7 @@
 
     /* Certificate */
     .certificate-section {
-        @apply container mx-auto select-none
+        @apply mx-auto select-none
     }
 
     .certificate-content {
