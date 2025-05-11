@@ -27,20 +27,24 @@ const certificate = [
 ]
 
 function CertificatePreview() {
+    const [newAdvice, setNewAdvice] = useState(false)
     const [quote, setQuote] = useState([])
+
+    const handleNewAdvice = () => {
+        getQuote()
+    }    
     
     const getQuote = async () => {
         try {
-            const quote = await fetchData()
-            setQuote(...quote)
-
-            const choiceRandomQuote = Math.floor(Math.random() * quote.length)
-            
-            setQuote(quote[choiceRandomQuote])
+            const quotes = await fetchData() // asumsi ini mengembalikan array of quotes
+            const randomIndex = Math.floor(Math.random() * quotes.length)
+            const selected = quotes[randomIndex]
+            setQuote(selected)
         } catch (error) {
             console.log(error)
         }
     }
+    
 
     useEffect(() => {
         getQuote()
@@ -48,13 +52,18 @@ function CertificatePreview() {
 
     return (
         <div className="certificate-content">
-            <div>
-                <blockquote>
-                    <p>
-                        {quote ? quote.quotes : ''}
-                    </p>
-                    <footer>— {quote ? quote.author : ''}, <cite>Self Entitled</cite></footer>
-                </blockquote>
+            <div className='quote-content flex flex-col items-center'>
+                <div className="quote flex gap-4 flex-col items-center p-4 sm:w-1/2 bg-sky-600 drop-shadow-sm rounded-sm hover:bg-white active:bg-white transition duration-300 group">
+                    <blockquote className='text-center text-[10px] sm:text-[12px] md:text-[14px] text-white group-hover:text-sky-600 active:text-sky-600 transition duration-300'>
+                        <p>
+                            "{quote?.quotes || ''}"
+                        </p>
+                        <footer>— {quote?.author || ''}, <cite>Self Entitled</cite></footer>
+                    </blockquote>
+                    <button className='px-8 py-1 bg-transparent border border-white text-white rounded text-xs md:text-sm group-hover:bg-sky-600 group-hover:text-white active:bg-sky-600 active:text-white transition duration-300' onClick={handleNewAdvice}>
+                        Give me advice
+                    </button>
+                </div>
             </div>
             <div className='head-project'>
                 <h1 className="text-project">Certificate</h1>
