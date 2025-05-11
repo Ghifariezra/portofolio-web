@@ -53,7 +53,7 @@ function CertificatePreview() {
     return (
         <div className="certificate-content">
             <div className='quote-content flex flex-col items-center'>
-                <div className="quote flex gap-4 flex-col items-center p-4 sm:w-1/2 bg-sky-600 drop-shadow-sm rounded-sm hover:bg-white active:bg-white transition duration-300 group">
+                <div className="quote flex gap-4 flex-col items-center p-4 w-60 sm:w-120 bg-sky-600 drop-shadow-sm rounded-sm hover:bg-white active:bg-white transition duration-300 group">
                     <blockquote className='text-center text-[10px] sm:text-[12px] md:text-[14px] text-white group-hover:text-sky-600 group-active:text-sky-600 transition duration-300'>
                         <p>
                             "{quote?.quotes || ''}"
