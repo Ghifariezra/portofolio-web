@@ -72,7 +72,7 @@ function HeroComponents() {
         </div>
         <h1
           className='text-greeting group'>
-          Hi, I'm <span data-aos='zoom-in' className='full-name'>Ghifari Ezra Ramadhan</span> <span data-aos='fade-up' className='waving-hand'>👋</span> <br /> a <span data-aos='fade-left' className='role hidden'>Fullstack Web Developer</span><span data-aos='fade-left' className='role'>Tech Generalist</span>
+          Hi, I'm <span data-aos='zoom-in' className='full-name'>Ghifari Ezra Ramadhan</span> <span data-aos='fade-up' className='waving-hand'>👋</span> <br /> a <span data-aos='fade-left' className='role'>Fullstack Enthusiast</span><span data-aos='fade-left' className='role hidden'>Tech Generalist</span>
         </h1>
         <hr className='hero-line' />
         <p
