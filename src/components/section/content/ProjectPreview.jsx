@@ -37,7 +37,7 @@ const projects = [
     livePreview: '/',
     certificate: DE_CERTIFICATE,
     category: 'Web',
-    status: 'Personal'
+    status: 'Individual'
   },
   {
     image: ETL,
@@ -46,7 +46,7 @@ const projects = [
     sourceCode: 'https://github.com/Ghifariezra/digitalskola-dataeng/tree/main/Project/etl-project',
     certificate: DE_CERTIFICATE,
     category: 'Data',
-    status: 'Team'
+    status: 'Collaboration'
   },
   {
     image: ELT,
@@ -55,7 +55,7 @@ const projects = [
     sourceCode: 'https://github.com/Ghifariezra/digitalskola-dataeng/tree/main/Project/elt-project/elt-snowflake',
     certificate: DE_CERTIFICATE,
     category: 'Data',
-    status: 'Team'
+    status: 'Collaboration'
   },
   {
     image: BATCH,
@@ -64,7 +64,7 @@ const projects = [
     sourceCode: 'https://github.com/Ghifariezra/digitalskola-dataeng/tree/main/Project/airflow-dbt-docker',
     certificate: DE_CERTIFICATE,
     category: 'Data',
-    status: 'Team'
+    status: 'Collaboration'
   },
 ]
 function ProjectPreview() {

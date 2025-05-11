@@ -1,9 +1,10 @@
 import { StrictMode } from "react";
+import CertificateSection from "@section/Certificate"
 
 function Certificate() {
   return (
     <StrictMode>
-        <h1 className="text-3xl font-bold underline">Certificate</h1>
+      <CertificateSection />
     </StrictMode>
   )
 }

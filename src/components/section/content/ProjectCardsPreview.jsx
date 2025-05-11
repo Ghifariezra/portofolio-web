@@ -11,7 +11,7 @@ function ProjectCardPreview({ image, title, techStack, sourceCode, livePreview, 
                 <div
                     className="img-project group"
                     style={{ backgroundImage: `url(${image})` }} data-aos="zoom-out" data-aos-delay="600"
-                    >
+                >
                     <div className='status-project'>
                         <div className='status'>
                             {status}
@@ -43,7 +43,7 @@ function ProjectCardPreview({ image, title, techStack, sourceCode, livePreview, 
                 </div>
             </div>
             <div className="wrapper-content-card">
-                <div className='wrapper-source'>
+                {/* <div className='wrapper-source'>
                     {
                         livePreview ? (
                             <a href={sourceCode} target='_blank' className='group' data-aos="fade-left">
@@ -51,7 +51,7 @@ function ProjectCardPreview({ image, title, techStack, sourceCode, livePreview, 
                             </a>
                         ) : (null)
                     }
-                </div>
+                </div> */}
                 <h1 className="head-card" data-aos="fade-left">{title}</h1>
                 <hr className="head-line" data-aos="fade-left" />
                 <h2 className="head-stack" data-aos="fade-left">Tech Stack</h2>

@@ -36,7 +36,7 @@
     }
 
     .menu-item {
-        @apply flex items-center focus-within:bg-sky-200 focus-within:opacity-80 focus-within:rounded-lg focus-within:cursor-pointer focus-within:text-sky-500 lg:hover:bg-sky-200 lg:hover:rounded-lg lg:hover:cursor-pointer lg:hover:text-sky-500 xl:hover:bg-sky-200 xl:hover:rounded-lg xl:hover:cursor-pointer xl:hover:text-sky-500 2xl:hover:bg-sky-200 2xl:hover:rounded-lg 2xl:hover:cursor-pointer 2xl:hover:text-sky-500 selection:bg-sky-200 selection:text-sky-500 transition-all duration-300 ease-in-out
+        @apply flex justify-center items-center w-full focus-within:bg-sky-200 focus-within:opacity-80 focus-within:rounded-full focus-within:cursor-pointer focus-within:text-sky-500 lg:hover:bg-sky-200 lg:hover:rounded-full lg:hover:cursor-pointer lg:hover:text-sky-500 xl:hover:bg-sky-200 xl:hover:rounded-full xl:hover:cursor-pointer xl:hover:text-sky-500 2xl:hover:bg-sky-200 2xl:hover:rounded-full 2xl:hover:cursor-pointer 2xl:hover:text-sky-500 selection:bg-sky-200 selection:text-sky-500 transition-all duration-300 ease-in-out
     }
 
     .text-item {
@@ -135,7 +135,7 @@
 
     /* Projects */
     .project-section-preview {
-        @apply mx-auto select-none bg-sky-100 pt-4 pb-10 overflow-hidden
+        @apply mx-auto select-none bg-sky-100 pt-0 pb-10 overflow-hidden
     }
 
     .project-content {
@@ -143,11 +143,11 @@
     }
 
     .head-project {
-        @apply flex justify-center my-6 w-50 sm:w-80 mx-auto px-8 py-2
+        @apply flex justify-center w-50 my-4 sm:w-80 mx-auto px-8 py-2 border-t border-b border-sky-700/30 rounded-2xl
     }
 
     .text-project {
-        @apply text-center text-sky-700 text-xl lg:text-3xl 2xl:text-4xl font-bold tracking-wider
+        @apply text-center text-sky-600 text-xl lg:text-3xl 2xl:text-4xl font-bold tracking-wider
     }
 
     .category-project {
@@ -171,7 +171,7 @@
     }
 
     .status-project {
-        @apply hidden group-hover:block bg-sky-900/50 rounded-br-2xl w-18
+        @apply hidden group-hover:block bg-green-300 rounded-br-2xl w-fit
     }
 
     .status {
@@ -236,5 +236,14 @@
 
     .btn-more {
         @apply mt-9 px-4 py-1 bg-blue-500 text-white rounded-md text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl group-hover:bg-blue-600 group-hover:-translate-y-4 transition-all duration-300 ease-in font-bold cursor-pointer tracking-wider
+    }
+
+    /* Certificate */
+    .certificate-section {
+        @apply container mx-auto select-none
+    }
+
+    .certificate-content {
+        @apply flex flex-col justify-center gap-4 mx-4 my-6 sm:mx-6 md:mx-8 lg:my-10 xl:my-12 2xl:my-16
     }
 }
