@@ -54,13 +54,13 @@ function CertificatePreview() {
         <div className="certificate-content">
             <div className='quote-content flex flex-col items-center'>
                 <div className="quote flex gap-4 flex-col items-center p-4 sm:w-1/2 bg-sky-600 drop-shadow-sm rounded-sm hover:bg-white active:bg-white transition duration-300 group">
-                    <blockquote className='text-center text-[10px] sm:text-[12px] md:text-[14px] text-white group-hover:text-sky-600 active:text-sky-600 transition duration-300'>
+                    <blockquote className='text-center text-[10px] sm:text-[12px] md:text-[14px] text-white group-hover:text-sky-600 group-active:text-sky-600 transition duration-300'>
                         <p>
                             "{quote?.quotes || ''}"
                         </p>
                         <footer>— {quote?.author || ''}, <cite>Self Entitled</cite></footer>
                     </blockquote>
-                    <button className='px-8 py-1 bg-transparent border border-white text-white rounded text-xs md:text-sm group-hover:bg-sky-600 group-hover:text-white active:bg-sky-600 active:text-white transition duration-300' onClick={handleNewAdvice}>
+                    <button className='px-8 py-1 bg-white text-sky-600 rounded text-xs md:text-sm group-hover:bg-sky-600 group-hover:text-white group-active:bg-sky-600 group-active:text-white transition duration-300' onClick={handleNewAdvice}>
                         Give me advice
                     </button>
                 </div>
