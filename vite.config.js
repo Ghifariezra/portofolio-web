@@ -16,6 +16,7 @@ export default defineConfig({
       '@form': resolve(__dirname, 'src/components/form'),
       '@layout': resolve(__dirname, 'src/layout'),
       '@app': resolve(__dirname, 'src/app'),
+      '@services': resolve(__dirname, 'src/services'),
       '@assets': resolve(__dirname, 'src/assets'),
       '@styles': resolve(__dirname, 'src/styles'),
       '@utils': resolve(__dirname, 'src/utils'),

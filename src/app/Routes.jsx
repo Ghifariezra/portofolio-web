@@ -15,7 +15,6 @@ const lazyWithDelay = (factory, ms = 3000) => {
     );
 };
 
-
 const Loader = lazy(() => import("@components/loaders/Loader"));
 const Root = lazy(() => import("@layout/MainLayout"));
 const Home = lazy(() => import("@pages/Home"));
