@@ -57,7 +57,7 @@ function HeroComponents() {
             data-aos="flip-up"
             className='btn-message'
             onClick={toggleModal}>
-            Send Email Message <span className='envelope'>📩</span>
+            Let's Disscussion <span className='envelope'>📩</span>
           </button>
         </div>
         {isOpen && (

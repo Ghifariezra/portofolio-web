@@ -1,12 +1,13 @@
 import { useState } from 'react'
 const RESUME = import.meta.env.VITE_RESUME
+const Contact = import.meta.env.VITE_CONTACT
 
 function NavbarComponents() {
   const [items] = useState([
     { id: 1, name: 'About', href: '/' },
     { id: 2, name: 'Certificate', href: '/certificate' },
-    { id: 3, name: 'Contact', href: '/contact' },
-    { id: 4, name: 'Resume', href: RESUME },
+    { id: 3, name: 'Resume', href: RESUME },
+    { id: 4, name: 'Contact', href: Contact },
   ])
 
   return (
@@ -15,7 +16,7 @@ function NavbarComponents() {
       <div
         key={index}
         className='menu-item'>
-        {item.name === 'Resume' ? (
+        {item.name === 'Resume' || item.name === 'Contact' ? (
           <a
             href={item.href}
             className='text-item'
