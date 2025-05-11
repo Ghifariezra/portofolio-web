@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import ProjectCardPreview from '@section/content/ProjectCardsPreview'
 import TAILWIND from '@assets/techstack/tailwind.svg'
 import JS from '@assets/techstack/javascript.svg'
@@ -73,6 +73,7 @@ function ProjectPreview() {
   const [active, setActive] = useState('All')
   const filterProject = active === 'All' ? projects : projects.filter((item) => item.category === active)
 
+  const useWrapperRef = useRef(null)
   const handleSeeMore = () => {
     setSeeMore(!seeMore)
   }
@@ -107,12 +108,23 @@ function ProjectPreview() {
         }
       </div>
       <div className='field-more group'>
-        <button 
-          className='btn-more'
-          onClick={handleSeeMore}
-        >
-          See More...
-        </button>
+        {
+          seeMore ? (
+            <button
+              className='btn-more'
+              onClick={handleSeeMore}
+            >
+              See Less...
+            </button>
+          ) : (
+            <button
+              className='btn-more'
+              onClick={handleSeeMore}
+            >
+              See More...
+            </button>
+          )
+        }
       </div>
     </div>
   )
