@@ -2,7 +2,7 @@ import { useState } from 'react'
 import GIT from '@assets/techstack/git.svg'
 import PREVIEW from '@assets/search.png'
 
-function ProjectCardPreview({ image, title, techStack, sourceCode, livePreview, certificate, status }) {
+function ProjectCardPreview({ image, title, description, techStack, sourceCode, livePreview, status }) {
     const [isHover, setIsHover] = useState(false)
 
     return (
@@ -44,6 +44,7 @@ function ProjectCardPreview({ image, title, techStack, sourceCode, livePreview, 
             </div>
             <div className="wrapper-content-card">
                 <h1 className="head-card" data-aos="fade-left">{title}</h1>
+                <h1 className="description" data-aos="fade-left">{description}</h1>
                 <hr className="head-line" data-aos="fade-left" />
                 <h2 className="head-stack" data-aos="fade-left">Tech Stack</h2>
                 <div className="wrapper-stack">

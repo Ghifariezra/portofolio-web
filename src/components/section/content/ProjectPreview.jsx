@@ -32,37 +32,37 @@ const projects = [
   {
     image: FE_CERTIFICATE,
     title: 'Portofolio Website',
+    description: "A personal portfolio website showcasing your professional profile as a Tech Generalist with a minimalist and responsive design. Features intuitive navigation, contact information, tech stack display, and 3D avatar. Built using modern web technologies to reflect your skills and experience in web development.",
     techStack: techStack.web,
     sourceCode: 'https://github.com/Ghifariezra/portofolio-web',
     livePreview: '/',
-    certificate: DE_CERTIFICATE,
     category: 'Web',
     status: 'Individual'
   },
   {
     image: ETL,
     title: 'ETL',
+    description: "A data pipeline implementing standard Extract-Transform-Load processes for data processing. Utilizes Python for extracting and transforming data from various sources, then loading results into target databases. Includes interactive data visualizations to facilitate analysis and result presentation.",
     techStack: techStack.data.ETL,
     sourceCode: 'https://github.com/Ghifariezra/digitalskola-dataeng/tree/main/Project/etl-project',
-    certificate: DE_CERTIFICATE,
     category: 'Data',
     status: 'Collaboration'
   },
   {
     image: ELT,
     title: 'ELT',
+    description: "A modern data pipeline implementing Extract-Load-Transform architecture with GitHub as the data source. The workflow extracts data from GitHub repositories, loads it into a data warehouse, and transforms it using dbt for analytics. Leverages Python and Snowflake for efficient data processing, with final results visualized through Looker Studio for interactive business intelligence.",
     techStack: techStack.data.ELT,
     sourceCode: 'https://github.com/Ghifariezra/digitalskola-dataeng/tree/main/Project/elt-project/elt-snowflake',
-    certificate: DE_CERTIFICATE,
     category: 'Data',
     status: 'Collaboration'
   },
   {
     image: BATCH,
     title: 'Batch Processing',
+    description: "A containerized data pipeline solution for handling batch data processes. Utilizes Docker for containerization, PostgreSQL for data storage, and Airflow for workflow orchestration. Features a complete ETL cycle with dbt for data transformation and Looker Studio for visualization. Designed for scalable, maintainable data processing with modern cloud-native tooling.",
     techStack: techStack.data.batchProcessing,
     sourceCode: 'https://github.com/Ghifariezra/digitalskola-dataeng/tree/main/Project/airflow-dbt-docker',
-    certificate: DE_CERTIFICATE,
     category: 'Data',
     status: 'Collaboration'
   },
@@ -98,16 +98,6 @@ function ProjectPreview() {
         ))}
       </div>
       <div className="wrapper-card">
-        {/* {filterProject.map((item, index) => (
-          <ProjectCardPreview key={index} {...item} />
-        ))} */}
-        {/* {
-          projects.length > 3 ? projects.slice(0, 3).map((item, index) => (
-            <ProjectCardPreview key={index} {...item} />
-          )) : projects.map((item, index) => (
-            <ProjectCardPreview key={index} {...item} />
-          ))
-        } */}
         {
           seeMore ? filterProject.map((item, index) => (
             <ProjectCardPreview key={index} {...item} />
