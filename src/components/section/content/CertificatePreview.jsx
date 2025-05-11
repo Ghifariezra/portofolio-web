@@ -27,7 +27,9 @@ const certificate = [
 function CertificatePreview() {
     return (
         <div className="certificate-content">
-            <h1 className="text-project">Certificate</h1>
+            <div className='head-project'>
+                <h1 className="text-project">Certificate</h1>
+            </div>
             <div className="wrapper-certificate">
                 {
                     certificate.map((item, index) => (
