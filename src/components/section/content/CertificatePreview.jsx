@@ -28,7 +28,7 @@ function CertificatePreview() {
     return (
         <div className="certificate-content">
             <h1 className="text-project">Certificate</h1>
-            <div className="grid gap-8 md:grid-cols-2">
+            <div className="wrapper-certificate">
                 {
                     certificate.map((item, index) => (
                         <CertificateCardsPreview key={index} {...item} />

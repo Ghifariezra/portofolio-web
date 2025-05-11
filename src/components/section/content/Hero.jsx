@@ -1,13 +1,26 @@
 import { useState, useEffect, useRef } from 'react'
 import Form from '@components/form/Form'
-import PROFILE from '@assets/profile.jpeg'
 import PROFILE3D from '@assets/avatar-profile.png'
+import LINKEDIN from '@assets/linkedin.png'
+import GIT from '@assets/techstack/git.svg'
 import TAILWIND from '@assets/techstack/tailwind.svg'
 import JS from '@assets/techstack/javascript.svg'
 import REACT from '@assets/techstack/react.svg'
 import VITE from '@assets/techstack/vite.svg'
 
 const skills = [JS, REACT, TAILWIND, VITE];
+const socialMedia = [
+  {
+    name: 'Linkedin',
+    icon: LINKEDIN,
+    url: 'https://www.linkedin.com/in/ghifariezraramadhan/',
+  },
+  {
+    name: 'Github',
+    icon: GIT,
+    url: 'https://github.com/Ghifariezra',
+  },
+];
 
 function HeroComponents() {
   const [isOpen, setIsOpen] = useState(false);
@@ -43,6 +56,15 @@ function HeroComponents() {
 
       <div
         className='hero-text'>
+        <div className='wrapper-skills flex flex-row gap-4 px-4 pt-4'>
+          {
+            socialMedia.map((item, index) => (
+              <a href={item.url} key={index} target="_blank">
+                <img className='social-media w-6 h-6' src={item.icon} alt={item.name} />
+              </a>
+            ))
+          }
+        </div>
         <h1
           className='text-greeting group'>
           Hi, I'm <span data-aos='zoom-in' className='full-name'>Ghifari Ezra Ramadhan</span> <span data-aos='fade-up' className='waving-hand'>👋</span> <br /> a <span data-aos='fade-left' className='role hidden'>Fullstack Web Developer</span><span data-aos='fade-left' className='role'>Tech Generalist</span>

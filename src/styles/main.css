@@ -246,4 +246,14 @@
     .certificate-content {
         @apply flex flex-col justify-center gap-4 mx-4 my-6 sm:mx-6 md:mx-8 lg:my-10 xl:my-12 2xl:my-16
     }
+
+    .wrapper-certificate {
+        @apply grid gap-8 md:grid-cols-2
+    }
+    .certificate-card {
+        @apply flex flex-col gap-4 bg-white rounded-2xl drop-shadow-sm w-full h-70 sm:h-76 lg:h-96 xl:h-120 overflow-hidden
+    }
+    .img-certificate {
+        @apply w-full h-full bg-center bg-contain bg-no-repeat
+    }
 }
