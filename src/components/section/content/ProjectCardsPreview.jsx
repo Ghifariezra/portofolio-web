@@ -43,15 +43,6 @@ function ProjectCardPreview({ image, title, techStack, sourceCode, livePreview, 
                 </div>
             </div>
             <div className="wrapper-content-card">
-                {/* <div className='wrapper-source'>
-                    {
-                        livePreview ? (
-                            <a href={sourceCode} target='_blank' className='group' data-aos="fade-left">
-                                <h1 className='text-sky-700 text-[9px] underline italic font-bold tracking-wider lg:group-hover:text-sm'>Source Code</h1>
-                            </a>
-                        ) : (null)
-                    }
-                </div> */}
                 <h1 className="head-card" data-aos="fade-left">{title}</h1>
                 <hr className="head-line" data-aos="fade-left" />
                 <h2 className="head-stack" data-aos="fade-left">Tech Stack</h2>
