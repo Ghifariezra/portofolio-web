@@ -3,8 +3,6 @@ import GIT from '@assets/techstack/git.svg'
 import PREVIEW from '@assets/search.png'
 
 function ProjectCardPreview({ image, title, description, techStack, sourceCode, livePreview, status }) {
-    const [isHover, setIsHover] = useState(false)
-
     return (
         <div className="card-project" data-aos="fade-left">
             <div className='group'>
