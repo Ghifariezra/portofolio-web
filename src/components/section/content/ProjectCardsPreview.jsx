@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import GIT from '@assets/techstack/git.svg'
 import PREVIEW from '@assets/search.png'
 
