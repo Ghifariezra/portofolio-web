@@ -69,7 +69,7 @@ const projects = [
 ]
 
 function ProjectPreview() {
-  const catalog = ['Frontend', 'All', 'Data']
+  const catalog = ['All', 'Frontend', 'Backend', 'Data']
   const [seeMore, setSeeMore] = useState(false)
   const [active, setActive] = useState('All')
   const filterProject = active === 'All' ? projects : projects.filter((item) => item.category === active)
