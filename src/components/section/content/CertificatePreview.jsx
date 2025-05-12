@@ -53,15 +53,15 @@ function CertificatePreview() {
     return (
         <div className="certificate-content">
             <div className='quote-content flex flex-col items-center'>
-                <div className="quote flex gap-4 flex-col items-center p-4 w-70 sm:w-120 bg-sky-600 drop-shadow-sm rounded-sm hover:bg-white active:bg-white transition duration-300 group">
-                    <blockquote className='text-center text-[10px] sm:text-[12px] md:text-[14px] text-white group-hover:text-sky-600 group-active:text-sky-600 transition duration-300'>
+                <div className="quote flex gap-4 flex-col items-center p-4 w-70 sm:w-120 bg-white drop-shadow-sm rounded-sm hover:bg-sky-600 active:bg-sky-600 transition duration-300 group">
+                    <blockquote className='text-center text-[10px] sm:text-[12px] md:text-[14px] text-sky-600 group-hover:text-white group-active:text-white transition duration-300'>
                         <p>
                             "{quote?.quotes || ''}"
                         </p>
                         <footer>— {quote?.author || ''}, <cite>Self Entitled</cite></footer>
                     </blockquote>
-                    <button className='px-8 py-1 bg-white text-sky-600 rounded text-xs md:text-sm group-hover:bg-sky-600 group-hover:text-white group-active:bg-sky-600 group-active:text-white transition duration-300' onClick={handleNewAdvice}>
-                        Give me advice
+                    <button className='px-8 py-1 bg-sky-600 text-white rounded text-xs md:text-sm group-hover:bg-white group-hover:text-sky-600 group-active:bg-white group-active:text-sky-600 transition duration-300' onClick={handleNewAdvice}>
+                        Other Quotes
                     </button>
                 </div>
             </div>
