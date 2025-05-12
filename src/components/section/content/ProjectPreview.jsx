@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import ProjectCardPreview from '@section/content/ProjectCardsPreview'
 import TAILWIND from '@assets/techstack/tailwind.svg'
 import JS from '@assets/techstack/javascript.svg'
@@ -67,16 +67,25 @@ const projects = [
     status: 'Collaboration'
   },
 ]
+
 function ProjectPreview() {
   const catalog = ['Web', 'All', 'Data']
   const [seeMore, setSeeMore] = useState(false)
   const [active, setActive] = useState('All')
   const filterProject = active === 'All' ? projects : projects.filter((item) => item.category === active)
 
-  const useWrapperRef = useRef(null)
+  // Reference untuk scroll
+  const lessRef = useRef(null)
   const handleSeeMore = () => {
     setSeeMore(!seeMore)
   }
+
+  useEffect(() => {
+    // Scroll ke bawah
+    if (seeMore) {
+      lessRef.current.scrollIntoView({ behavior: 'smooth' })
+    }
+  }, [seeMore])
 
   return (
     <div className="project-content">
@@ -112,6 +121,7 @@ function ProjectPreview() {
           seeMore ? (
             <button
               className='btn-more'
+              ref={lessRef} // Target scroll
               onClick={handleSeeMore}
             >
               See Less...
