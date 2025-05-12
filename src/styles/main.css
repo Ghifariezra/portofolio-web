@@ -53,7 +53,7 @@
     }
 
     .hero-image {
-        @apply rounded-t-full sm:rounded-t-4xl sm:rounded-br-4xl xl:rounded-none xl:rounded-t-4xl xl:rounded-bl-4xl overflow-hidden border-double border-4 border-sky-700/20 relative transition-transform duration-500 ease-in-out sm:hover:scale-105;
+        @apply object-cover rounded-t-full sm:rounded-t-4xl sm:rounded-br-4xl xl:rounded-none xl:rounded-t-4xl xl:rounded-bl-4xl overflow-hidden border-double border-4 border-sky-700/20 relative transition-transform duration-500 ease-in-out sm:hover:scale-105;
     }
 
 
@@ -78,7 +78,11 @@
     }
 
     .hero-text {
-        @apply flex flex-col justify-between items-center sm:items-stretch sm:mr-10 sm:my-0 md:mr-16 md:gap-2 xl:mr-18 2xl:mr-20
+        @apply flex flex-col justify-between items-center sm:items-stretch sm:px-4
+    }
+
+    .wrapper-sosmed {
+        @apply flex flex-row gap-4 px-4 pt-4
     }
 
     .hero-line {
@@ -122,15 +126,15 @@
     }
 
     .skills {
-        @apply grid grid-cols-4 gap-4 w-full h-full p-8 sm:grid-cols-1 sm:gap-10 sm:w-1/2 sm:items-center sm:p-0 sm:mr-4 sm:border-slate-300 md:gap-18 md:border-r md:p-4 lg:p-0 xl:mt-0 2xl:mt-0
+        @apply grid grid-cols-4 gap-4 p-8 sm:grid-cols-1 sm:gap-10 sm:w-1/2 sm:items-center sm:p-0 sm:mr-4 sm:border-slate-300 md:gap-18 md:border-r md:p-4 lg:p-0 xl:mt-0 2xl:mt-0
     }
 
     .tech-stack {
-        @apply hidden -rotate-90 sm:block sm:rotate-0 sm:mx-auto sm:text-[6px] sm:text-center md:text-[10px] lg:text-[12px] xl:text-[14px] font-bold text-slate-900 tracking-wider
+        @apply hidden -rotate-90 sm:block sm:rotate-0 sm:mx-auto sm:text-[10px] sm:text-center md:text-[14px] lg:text-[16px] xl:text-[20px] font-bold text-slate-900 tracking-wider
     }
 
     .skill {
-        @apply mx-auto hover:scale-130 hover:-rotate-12 transition-all duration-300 w-8 sm:w-6 lg:w-10
+        @apply mx-auto hover:scale-130 hover:-rotate-12 transition-all duration-300 w-8 sm:w-10 lg:w-12
     }
 
     /* Projects */
@@ -155,7 +159,7 @@
     }
 
     .category-item {
-        @apply px-8 py-1 text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl sm:px-12 lg:px-20 sm:py-1 rounded-2xl cursor-pointer transition-all duration-200
+        @apply px-7 py-1 text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl sm:px-18 lg:px-24 sm:py-1 rounded-2xl cursor-pointer transition-all duration-200
     }
 
     .wrapper-card {
@@ -163,7 +167,7 @@
     }
 
     .card-project {
-        @apply w-full bg-white p-4 rounded-lg drop-shadow-sm
+        @apply bg-white p-4 rounded-lg drop-shadow-sm
     }
 
     .img-project {

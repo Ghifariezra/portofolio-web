@@ -36,7 +36,7 @@ const projects = [
     techStack: techStack.web,
     sourceCode: 'https://github.com/Ghifariezra/portofolio-web',
     livePreview: '/',
-    category: 'Web',
+    category: 'Frontend',
     status: 'Individual'
   },
   {
@@ -69,7 +69,7 @@ const projects = [
 ]
 
 function ProjectPreview() {
-  const catalog = ['Web', 'All', 'Data']
+  const catalog = ['Frontend', 'All', 'Data']
   const [seeMore, setSeeMore] = useState(false)
   const [active, setActive] = useState('All')
   const filterProject = active === 'All' ? projects : projects.filter((item) => item.category === active)

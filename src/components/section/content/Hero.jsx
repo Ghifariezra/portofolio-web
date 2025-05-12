@@ -61,7 +61,7 @@ function HeroComponents() {
 
       <div
         className='hero-text'>
-        <div className='wrapper-skills flex flex-row gap-4 px-4 pt-4'>
+        <div className='wrapper-sosmed'>
           {
             socialMedia.map((item, index) => (
               <a href={item.url} key={index} target="_blank">
