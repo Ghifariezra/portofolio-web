@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from 'react'
 import ProjectCardPreview from '@section/content/ProjectCardsPreview'
+import { fetchProjects } from '@services/MyAPI'
 
 function ProjectPreview() {
   const catalog = ['All', 'Frontend', 'Fullstack', 'Data']
@@ -19,13 +20,16 @@ function ProjectPreview() {
     })
   }
 
-  useEffect(() => {
-    const getProjects = async () => {
-      const res = await fetch(import.meta.env.VITE_API_PROJECT)
-      const data = await res.json()
-      setProjectData(data)
+  const getProjects = async () => {
+    try {
+      const projects = await fetchProjects()
+      setProjectData(projects)
+    } catch (error) {
+      console.log(error)
     }
-
+  }
+  
+  useEffect(() => {
     getProjects()
   }, [])
 

@@ -1,34 +1,11 @@
 import { useState, useEffect } from 'react'
 import CertificateCardsPreview from '@section/content/CertificateCardsPreview'
-import DE_CERTIFICATE from '@assets/DE-Certificate.png'
 import fetchData from '@services/Quotes'
-
-const certificate = [
-    {
-        image: DE_CERTIFICATE,
-        title: 'Data Engineering',
-        certificate: DE_CERTIFICATE,
-    },
-    {
-        image: DE_CERTIFICATE,
-        title: 'Data Engineering',
-        certificate: DE_CERTIFICATE,
-    },
-    {
-        image: DE_CERTIFICATE,
-        title: 'Data Engineering',
-        certificate: DE_CERTIFICATE,
-    },
-    {
-        image: DE_CERTIFICATE,
-        title: 'Data Engineering',
-        certificate: DE_CERTIFICATE,
-    },
-]
+import { fetchCertificate } from '@services/MyAPI'
 
 function CertificatePreview() {
-    const [newAdvice, setNewAdvice] = useState(false)
     const [quote, setQuote] = useState([])
+    const [certificate, setCertificate] = useState([])
 
     const handleNewAdvice = () => {
         getQuote()
@@ -44,9 +21,19 @@ function CertificatePreview() {
             console.log(error)
         }
     }
+
+    const getCertificate = async () => {
+        try {
+            const certificates = await fetchCertificate()
+            setCertificate(certificates)
+        } catch (error) {
+            console.log(error)
+        }
+    }
     
 
     useEffect(() => {
+        getCertificate()
         getQuote()
     }, [])
 
