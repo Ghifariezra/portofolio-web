@@ -1,6 +1,9 @@
 import { useState, useRef, useEffect } from 'react'
 import ProjectCardPreview from '@section/content/ProjectCardsPreview'
 import TAILWIND from '@assets/techstack/tailwind.svg'
+import EXPRESSJS from '@assets/techstack/expressjs.svg'
+import NODEJS from '@assets/techstack/nodejs.svg'
+import EJS from '@assets/techstack/ejs.svg'
 import JS from '@assets/techstack/javascript.svg'
 import REACT from '@assets/techstack/react.svg'
 import VITE from '@assets/techstack/vite.svg'
@@ -13,14 +16,17 @@ import LOOKER from '@assets/techstack/looker.svg'
 import DOCKER from '@assets/techstack/docker.svg'
 import AIRFLOW from '@assets/techstack/airflow.svg'
 import DBT from '@assets/techstack/dbt.svg'
-import DE_CERTIFICATE from '@assets/DE-Certificate.png'
-import FE_CERTIFICATE from '@assets/web-portofolio.png'
+import BOOKBITES from '@assets/bookbites.png'
+import WEBPORTO from '@assets/web-portofolio.png'
 import ETL from '@assets/ETL.png'
 import ELT from '@assets/ELT.png'
 import BATCH from '@assets/batch-processing.jpg'
 
 const techStack = {
-  web: [JS, TAILWIND, REACT, VITE],
+  web: {
+    portofolio: [JS, TAILWIND, REACT, VITE],
+    bookBites: [JS, EJS, NODEJS, EXPRESSJS, PSQL],
+  },
   data: {
     ETL: [PY, PSQL, LOOKER],
     ELT: [GIT, PANDAS, SNOWFLAKE, DBT, LOOKER],
@@ -30,10 +36,20 @@ const techStack = {
 
 const projects = [
   {
-    image: FE_CERTIFICATE,
+    image: BOOKBITES,
+    title: 'Book Bites',
+    description: "Book Notes is a full-stack web application designed to help avid readers organize and retain key insights from the non-fiction books they read. Users can record notes, rate books, track reading dates, and view book covers via the Open Library Covers API. The app offers a clean, user-friendly interface where books can be searched, sorted, updated, and deleted with ease.",
+    techStack: techStack.web.bookBites,
+    sourceCode: 'https://github.com/Ghifariezra/bookbites',
+    livePreview: 'https://bookbites.onrender.com',
+    category: 'Backend',
+    status: 'Individual'
+  },
+  {
+    image: WEBPORTO,
     title: 'Portofolio Website',
     description: "A personal portfolio website showcasing your professional profile as a Tech Generalist with a minimalist and responsive design. Features intuitive navigation, contact information, tech stack display, and 3D avatar. Built using modern web technologies to reflect your skills and experience in web development.",
-    techStack: techStack.web,
+    techStack: techStack.web.portofolio,
     sourceCode: 'https://github.com/Ghifariezra/portofolio-web',
     livePreview: '/',
     category: 'Frontend',
@@ -73,11 +89,15 @@ function ProjectPreview() {
   const [seeMore, setSeeMore] = useState(false)
   const [active, setActive] = useState('All')
   const filterProject = active === 'All' ? projects : projects.filter((item) => item.category === active)
+  const lengthProject = active === 'All' ? projects.length : projects.filter((item) => item.category === active).length
+  console.log(lengthProject)
 
   // Reference untuk scroll
   const lessRef = useRef(null)
   const handleSeeMore = () => {
-    setSeeMore(!seeMore)
+    setSeeMore(seeMore => {
+      return !seeMore
+    })
   }
 
   useEffect(() => {
@@ -85,6 +105,7 @@ function ProjectPreview() {
     if (seeMore) {
       lessRef.current.scrollIntoView({ behavior: 'smooth' })
     }
+
   }, [seeMore])
 
   return (
@@ -116,26 +137,30 @@ function ProjectPreview() {
           ))
         }
       </div>
-      <div className='field-more group'>
-        {
-          seeMore ? (
-            <button
-              className='btn-more'
-              ref={lessRef} // Target scroll
-              onClick={handleSeeMore}
-            >
-              See Less...
-            </button>
-          ) : (
-            <button
-              className='btn-more'
-              onClick={handleSeeMore}
-            >
-              See More...
-            </button>
-          )
-        }
-      </div>
+      {
+        lengthProject > 2 && (
+          <div className='field-more group'>
+            {
+              seeMore ? (
+                <button
+                  className='btn-more'
+                  ref={lessRef} // Target scroll
+                  onClick={handleSeeMore}
+                >
+                  See Less...
+                </button>
+              ) : (
+                <button
+                  className='btn-more'
+                  onClick={handleSeeMore}
+                >
+                  See More...
+                </button>
+              )
+            }
+          </div>
+        )
+      }
     </div>
   )
 }
