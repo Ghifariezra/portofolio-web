@@ -24,6 +24,7 @@ function ProjectPreview() {
       const res = await fetch(import.meta.env.VITE_API_PROJECT)
       const data = await res.json()
       setProjectData(data)
+      console.log(data)
     }
 
     getProjects()

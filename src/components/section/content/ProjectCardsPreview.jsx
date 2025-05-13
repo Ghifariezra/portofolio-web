@@ -2,7 +2,6 @@ import GIT from '@assets/techstack/git.svg'
 import PREVIEW from '@assets/search.png'
 
 function ProjectCardPreview({ image, title, description, techStack, sourceCode, livePreview, status }) {
-    const img = import.meta.env.VITE_ENDPOINT_API_PROJECT + image
     return (
         <div className="card-project" data-aos="fade-left">
             <div className='group'>
@@ -47,7 +46,7 @@ function ProjectCardPreview({ image, title, description, techStack, sourceCode, 
                 <h2 className="head-stack" data-aos="fade-left">Tech Stack</h2>
                 <div className="wrapper-stack">
                     {techStack.map((item, index) => (
-                        <img key={index} src={import.meta.env.VITE_ENDPOINT_API_PROJECT + item} alt={`Tech ${index}`} className="ratio-stack" data-aos="fade-left" />
+                        <img key={index} src={item} alt={`Tech ${index}`} className="ratio-stack" data-aos="fade-left" />
                     ))}
                 </div>
             </div>
