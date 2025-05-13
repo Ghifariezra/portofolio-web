@@ -1,38 +1,25 @@
 import { useState, useEffect, useRef } from 'react'
 import Form from '@components/form/Form'
-import PROFILE3D from '@assets/avatar-profile.png'
-import LINKEDIN from '@assets/linkedin.png'
-import TELEGRAM from '@assets/telegram.png'
-import GIT from '@assets/techstack/git.svg'
-import TAILWIND from '@assets/techstack/tailwind.svg'
-import JS from '@assets/techstack/javascript.svg'
-import REACT from '@assets/techstack/react.svg'
-import VITE from '@assets/techstack/vite.svg'
-
-const skills = [JS, REACT, TAILWIND, VITE];
-const socialMedia = [
-  {
-    name: 'Telegram',
-    icon: TELEGRAM,
-    url: import.meta.env.VITE_TELEGRAM,
-  },
-  {
-    name: 'Linkedin',
-    icon: LINKEDIN,
-    url: import.meta.env.VITE_LINKEDIN,
-  },
-  {
-    name: 'Github',
-    icon: GIT,
-    url: import.meta.env.VITE_GITHUB,
-  },
-];
+import { fetchHero } from '@services/MyAPI'
 
 function HeroComponents() {
+  const [hero, setHero] = useState({})
   const [isOpen, setIsOpen] = useState(false);
   const toggleModal = () => setIsOpen(!isOpen);
-
   const modalRef = useRef();
+
+  const getHero = async () => {
+    try {
+      const hero = await fetchHero()
+      setHero(hero)
+    } catch (error) {
+      console.log(error)
+    }
+  }
+  useEffect(() => {
+    getHero()
+  }, [])
+
   useEffect(() => {
     const handleClickOutside = (e) => {
       // Jika modal terbuka dan klik di luar form/modal box, tutup
@@ -51,7 +38,7 @@ function HeroComponents() {
       <div
         data-aos="flip-up"
         className='hero-image group'>
-        <img src={PROFILE3D} alt="profile" className=' profile' />
+        <img src={hero.imageProfile} alt="profile" className=' profile' />
         <div className='profile-gradient'></div>
         <div className='profile-overlay'>
           <h3 className='profile-name'>Ghifari Ezra Ramadhan</h3>
@@ -63,7 +50,7 @@ function HeroComponents() {
         className='hero-text'>
         <div className='wrapper-sosmed'>
           {
-            socialMedia.map((item, index) => (
+            hero.socialMedia.map((item, index) => (
               <a href={item.url} key={index} target="_blank">
                 <img className='social-media' src={item.icon} alt={item.name} />
               </a>
@@ -97,7 +84,7 @@ function HeroComponents() {
       </div>
       <div className='skills'>
         <h1 className='tech-stack' data-aos="flip-up">Tech Stack</h1>
-        {skills.map((skill, index) => (
+        {hero.skills.map((skill, index) => (
           <img
             data-aos="flip-up"
             key={index}

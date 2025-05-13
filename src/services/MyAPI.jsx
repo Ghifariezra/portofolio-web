@@ -16,5 +16,14 @@ const fetchCertificate = async () => {
 
     return data
 }
+const fetchHero = async () => {
+    const data = await fetch(import.meta.env.VITE_API_HERO)
+        .then(res => res.json())
+        .then(data => {
+            return data
+        })
 
-export { fetchProjects, fetchCertificate }
+    return data
+}
+
+export { fetchProjects, fetchCertificate, fetchHero }
