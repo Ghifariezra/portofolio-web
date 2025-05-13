@@ -43,7 +43,7 @@ const projects = [
     sourceCode: 'https://github.com/Ghifariezra/bookbites',
     livePreview: 'https://bookbites.onrender.com',
     category: 'Fullstack',
-    status: 'Individual: is not responsive'
+    status: 'Individual: is not optimized for responsive'
   },
   {
     image: WEBPORTO,
