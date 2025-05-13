@@ -49,13 +49,12 @@ function HeroComponents() {
       <div
         className='hero-text'>
         <div className='wrapper-sosmed'>
-          {
+          {hero.socialMedia?.length > 0 &&
             hero.socialMedia.map((item, index) => (
               <a href={item.url} key={index} target="_blank">
-                <img className='social-media' src={item.icon} alt={item.name} />
+                <img className="social-media" src={item.icon} alt={item.name} />
               </a>
-            ))
-          }
+            ))}
         </div>
         <h1
           className='text-greeting group'>
@@ -84,15 +83,15 @@ function HeroComponents() {
       </div>
       <div className='skills'>
         <h1 className='tech-stack' data-aos="flip-up">Tech Stack</h1>
-        {hero.skills.map((skill, index) => (
-          <img
-            data-aos="flip-up"
-            key={index}
-            src={skill}
-            alt={skill}
-            className='skill' />
-        ))
-        }
+        {hero.skills?.length > 0 &&
+          hero.skills.map((skill, index) => (
+            <img
+              key={index}
+              src={skill}
+              alt={`skill-${index}`}
+              className="skill"
+            />
+          ))}
       </div>
       {/* <hr /> */}
     </div>
