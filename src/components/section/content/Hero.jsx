@@ -5,7 +5,6 @@ import PROFILE from '@assets/avatar-profile.png'
 
 function HeroComponents() {
   const [hero, setHero] = useState({
-    imageProfile: PROFILE,
     skills: [],
     socialMedia: [],
   })
@@ -43,7 +42,7 @@ function HeroComponents() {
       <div
         data-aos="flip-up"
         className='hero-image group'>
-        <img src={hero.imageProfile} alt="profile" className=' profile' />
+        <img src={PROFILE} alt="profile" className=' profile' />
         <div className='profile-gradient'></div>
         <div className='profile-overlay'>
           <h3 className='profile-name'>Ghifari Ezra Ramadhan</h3>
