@@ -42,8 +42,8 @@ const projects = [
     techStack: techStack.web.bookBites,
     sourceCode: 'https://github.com/Ghifariezra/bookbites',
     livePreview: 'https://bookbites.onrender.com',
-    category: 'Backend',
-    status: 'Individual'
+    category: 'Fullstack',
+    status: 'Individual: is not responsive, sorry'
   },
   {
     image: WEBPORTO,
@@ -85,12 +85,11 @@ const projects = [
 ]
 
 function ProjectPreview() {
-  const catalog = ['All', 'Frontend', 'Backend', 'Data']
+  const catalog = ['All', 'Frontend', 'Fullstack', 'Data']
   const [seeMore, setSeeMore] = useState(false)
   const [active, setActive] = useState('All')
   const filterProject = active === 'All' ? projects : projects.filter((item) => item.category === active)
   const lengthProject = active === 'All' ? projects.length : projects.filter((item) => item.category === active).length
-  console.log(lengthProject)
 
   // Reference untuk scroll
   const lessRef = useRef(null)

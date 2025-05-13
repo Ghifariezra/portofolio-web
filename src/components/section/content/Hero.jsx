@@ -24,7 +24,7 @@ const socialMedia = [
   {
     name: 'Github',
     icon: GIT,
-    url: 'https://github.com/Ghifariezra',
+    url: import.meta.env.VITE_GITHUB,
   },
 ];
 
@@ -65,7 +65,7 @@ function HeroComponents() {
           {
             socialMedia.map((item, index) => (
               <a href={item.url} key={index} target="_blank">
-                <img className='social-media w-6 h-6' src={item.icon} alt={item.name} />
+                <img className='social-media' src={item.icon} alt={item.name} />
               </a>
             ))
           }

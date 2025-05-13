@@ -84,6 +84,9 @@
     .wrapper-sosmed {
         @apply flex flex-row gap-4 px-4 pt-4
     }
+    .social-media {
+        @apply w-6 h-6
+    }
 
     .hero-line {
         @apply w-full mt-4 sm:mt-0 border-slate-300
@@ -262,5 +265,22 @@
     }
     .img-certificate {
         @apply w-full h-full bg-center bg-contain bg-no-repeat
+    }
+
+    /* Footer */
+    .footer-section {
+        @apply px-8 select-none bg-white
+    }
+    .footer-component {
+        @apply h-20 sm:h-25 grid grid-cols-2 justify-between items-center
+    }
+    .copyright {
+        @apply text-sm text-sky-400 sm:text-base font-bold tracking-wider
+    }
+    .footer-sosmed {
+        @apply flex flex-row justify-end gap-2 sm:gap-4
+    }   
+    .footer-social-media {
+        @apply w-4 h-4 sm:w-6 sm:h-6
     }
 }
