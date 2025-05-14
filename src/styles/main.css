@@ -157,12 +157,28 @@
         @apply text-center text-xl lg:text-3xl 2xl:text-4xl font-bold tracking-wider
     }
 
+    .dropdown {
+        @apply py-6 sm:hidden flex flex-col gap-2
+    }
+
+    .dropdown-btn {
+        @apply px-4 py-2 flex justify-between rounded-xl bg-white text-sky-500 active:bg-sky-500 active:text-white cursor-pointer
+    }
+
+    .dropdown-content {
+        @apply bg-white rounded-2xl overflow-hidden
+    }
+
+    .dropdown-item {
+        @apply px-4 py-2
+    }
+
     .category-project {
-        @apply grid grid-cols-2 sm:flex sm:flex-row gap-4 justify-between items-center py-8
+        @apply hidden sm:flex sm:flex-row gap-4 justify-between items-center py-8
     }
 
     .category-item {
-        @apply px-4 py-1 col-span-2 text-center text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl sm:px-10 lg:px-15 xl:px-20 2xl:px-25 sm:py-1 rounded-2xl cursor-pointer transition-all duration-200
+        @apply px-4 py-1 col-span-2 text-center text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl sm:px-7 lg:px-15 xl:px-20 2xl:px-25 sm:py-1 rounded-2xl cursor-pointer transition-all duration-200
     }
 
     .wrapper-card {
