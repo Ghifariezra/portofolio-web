@@ -3,7 +3,7 @@ import ProjectCardPreview from '@section/content/ProjectCardsPreview'
 import { fetchProjects } from '@services/MyAPI'
 
 function ProjectPreview() {
-  const catalog = ['All', 'Frontend', 'Fullstack', 'Data']
+  const catalog = ['All', 'Frontend', 'Fullstack', 'Backend', 'Data']
   const [seeMore, setSeeMore] = useState(false)
   const [active, setActive] = useState('All')
   const [projects, setProjectData] = useState([])
