@@ -21,9 +21,17 @@ function ProjectPreview() {
   }
 
   const getProjects = async () => {
+    const cachedProjects = localStorage.getItem('projects')
+
+    if (cachedProjects) {
+      setProjectData(JSON.parse(cachedProjects))
+      return
+    }
+
     try {
       const projects = await fetchProjects()
       setProjectData(projects)
+      localStorage.setItem('projects', JSON.stringify(projects)) // simpan cache
     } catch (error) {
       console.log(error)
     }

@@ -13,13 +13,21 @@ function HeroComponents() {
   const modalRef = useRef();
 
   const getHero = async () => {
+    const cachedHero = localStorage.getItem('hero')
+
+    if (cachedHero) {
+      setHero(JSON.parse(cachedHero))
+      return
+    }
     try {
       const hero = await fetchHero()
       setHero(hero)
+      localStorage.setItem('hero', JSON.stringify(hero))
     } catch (error) {
       console.log(error)
     }
   }
+
   useEffect(() => {
     getHero()
   }, [])

@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import CertificateCardsPreview from '@section/content/CertificateCardsPreview'
-import fetchData from '@services/Quotes'
-import { fetchCertificate } from '@services/MyAPI'
+import { fetchCertificate, fetchQuotes } from '@services/MyAPI'
 
 function CertificatePreview() {
     const [quote, setQuote] = useState([])
@@ -9,11 +8,11 @@ function CertificatePreview() {
 
     const handleNewAdvice = () => {
         getQuote()
-    }    
-    
+    }
+
     const getQuote = async () => {
         try {
-            const quotes = await fetchData() // asumsi ini mengembalikan array of quotes
+            const quotes = await fetchQuotes()
             const randomIndex = Math.floor(Math.random() * quotes.length)
             const selected = quotes[randomIndex]
             setQuote(selected)
@@ -23,9 +22,15 @@ function CertificatePreview() {
     }
 
     const getCertificate = async () => {
+        const cachedCertificates = localStorage.getItem('certificates')
+        if (cachedCertificates) {
+            setCertificate(JSON.parse(cachedCertificates))
+            return
+        }
         try {
             const certificates = await fetchCertificate()
             setCertificate(certificates)
+            localStorage.setItem('certificates', JSON.stringify(certificates))
         } catch (error) {
             console.log(error)
         }
@@ -43,7 +48,7 @@ function CertificatePreview() {
                 <div className="quote flex gap-4 flex-col items-center p-4 w-70 sm:w-120 bg-white drop-shadow-sm rounded-sm hover:bg-sky-600 active:bg-sky-600 transition duration-300 group">
                     <blockquote className='text-center text-[10px] sm:text-[12px] md:text-[14px] text-sky-600 group-hover:text-white group-active:text-white transition duration-300'>
                         <p>
-                            "{quote?.quotes || ''}"
+                            "{quote?.quote || ''}"
                         </p>
                         <footer>— {quote?.author || ''}, <cite>Self Entitled</cite></footer>
                     </blockquote>
