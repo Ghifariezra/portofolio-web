@@ -1,4 +1,4 @@
-import { useEffect, StrictMode } from "react";
+import { useEffect } from "react";
 import { Outlet } from "react-router-dom";
 import Header from "@shared/Navbar";
 import Footer from "@shared/Footer";
