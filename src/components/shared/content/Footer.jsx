@@ -1,27 +1,22 @@
-import LINKEDIN from '@assets/linkedin.png'
-import TELEGRAM from '@assets/telegram.png'
-import GIT from '@assets/techstack/git.svg'
+import { useState, useEffect } from 'react'
+import { fetchHero } from '@services/MyAPI'
 
-const sosmed = [
-    {
-        name: 'Telegram',
-        icon: TELEGRAM,
-        url: import.meta.env.VITE_TELEGRAM,
-    },
-    {
-        name: 'Linkedin',
-        icon: LINKEDIN,
-        url: import.meta.env.VITE_LINKEDIN,
-    },
-    {
-        name: 'Github',
-        icon: GIT,
-        url: import.meta.env.VITE_GITHUB,
-    },
-]
+function FooterComponents() {
+    const [sosmed, setSosmed] = useState([]);
 
-function FooterComponents(){
-    return(
+    const getHero = async () => {
+        try {
+            const hero = await fetchHero()
+            setSosmed(hero.socialMedia)
+        } catch (error) {
+            console.log(error)
+        }
+    }
+    useEffect(() => {
+        getHero()
+    }, [])
+
+    return (
         <div className='footer-component'>
             <h1 className="copyright">@GhifariEzraRamadhan</h1>
             <div className='footer-sosmed'>
