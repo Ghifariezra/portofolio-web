@@ -54,66 +54,66 @@ const Form = ({ closeModal }) => {
     };
  
     return (
-        <div className="flex justify-center items-center h-screen">
-            <div className="bg-white rounded-lg shadow-lg p-4 w-80 sm:p-6 sm:w-96">
-                <div className="flex justify-between items-center mb-4">
-                    <h2 className="text-2xl text-center font-bold">Contact Us</h2>
+        <div className="wrapper-form" data-aos="fade-up">
+            <div className="form-content" data-aos="zoom-in" data-aos-duration="1000">
+                <div className="header-form">
+                    <h2 className="contact-form">Send by email</h2>
                     <CloseRoundedIcon className="cursor-pointer" onClick={closeModal} />
                 </div>
                 <form ref={formRef} onSubmit={sendEmail}> {/* 👈 ref di sini */}
                     <input type="hidden" name="time" value={formData.time} />
                     <div className="mb-4">
-                        <label className="block text-gray-700 font-medium mb-2">Name</label>
+                        <label className="label-name">Name</label>
                         <input
                             type="text"
                             name="name"
                             value={formData.name}
                             onChange={handleChange}
                             placeholder="Jane Doe"
-                            className="w-full px-3 py-2 border rounded"
+                            className="input-name"
                             required
                         />
                     </div>
                     <div className="mb-4">
-                        <label className="block text-gray-700 font-medium mb-2">Email</label>
+                        <label className="label-email">Email</label>
                         <input
                             type="email"
                             name="email"
                             value={formData.email}
                             onChange={handleChange}
                             placeholder="janedoe@gmail.com"
-                            className="w-full px-3 py-2 border rounded"
+                            className="input-email"
                             required
                         />
                     </div>
                     <div className="mb-4">
-                        <label className="block text-gray-700 font-medium mb-2">Subject</label>
+                        <label className="label-subject">Subject</label>
                         <input
                             type="text"
                             name="subject"
                             value={formData.subject}
                             onChange={handleChange}
                             placeholder="Subject of your message"
-                            className="w-full px-3 py-2 border rounded"
+                            className="input-subject"
                         />
                     </div>
                     <div className="mb-4">
-                        <label className="block text-gray-700 font-medium mb-2">Message</label>
+                        <label className="label-message">Message</label>
                         <textarea
                             name="message"
                             value={formData.message}
                             onChange={handleChange}
                             placeholder="Your Message"
-                            className="w-full px-3 py-2 border rounded"
+                            className="input-message"
                             rows="4"
                             required
                         ></textarea>
                     </div>
                     <button
                         type="submit"
-                        className="w-full bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+                        className="btn-send"
                     >
-                        Send Me
+                        Submit Message
                     </button>
                 </form>
             </div>

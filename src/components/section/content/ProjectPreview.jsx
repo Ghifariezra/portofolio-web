@@ -63,17 +63,6 @@ function ProjectPreview() {
       </div>
 
       {/* Mobile Dropdown */}
-      {/* <div className="sm:hidden px-0 py-4">
-        <select
-          className="w-full px-4 py-2 rounded-xl bg-white text-sky-500 font-bold"
-          value={active}
-          onChange={(e) => setActive(e.target.value)}
-        >
-          {catalog.map((item, index) => (
-            <option key={index} value={item}>{item}</option>
-          ))}
-        </select>
-      </div> */}
       <div className='dropdown'>
         <div className="dropdown-btn" onClick={handleDropdown}>
           {active} {
@@ -106,7 +95,8 @@ function ProjectPreview() {
         )
         }
       </div>
-
+      
+      {/* Desktop */}
       <div className="category-project">
         {catalog.map((item, index) => (
           <div
