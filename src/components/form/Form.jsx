@@ -1,5 +1,6 @@
 import React, { useState, useRef } from "react"; // pakai useRef
 import emailjs from "@emailjs/browser";
+import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 
 const serviceID = import.meta.env.VITE_SERVICE_ID;
 const templateID = import.meta.env.VITE_TEMPLATE_ID;
@@ -57,9 +58,7 @@ const Form = ({ closeModal }) => {
             <div className="bg-white rounded-lg shadow-lg p-4 w-80 sm:p-6 sm:w-96">
                 <div className="flex justify-between items-center mb-4">
                     <h2 className="text-2xl text-center font-bold">Contact Us</h2>
-                    <span className="material-symbols-outlined cursor-pointer" onClick={closeModal}>
-                        close
-                    </span>
+                    <CloseRoundedIcon className="cursor-pointer" onClick={closeModal} />
                 </div>
                 <form ref={formRef} onSubmit={sendEmail}> {/* 👈 ref di sini */}
                     <input type="hidden" name="time" value={formData.time} />

@@ -81,7 +81,7 @@ function ProjectPreview() {
           }
         </div>
         {dropdown && (
-          <div className="dropdown-content">
+          <div className="dropdown-content" data-aos="flip-down" data-aos-easing="ease-in-sine">
             {catalog.map((item, index) => (
               <div
                 key={index}
@@ -94,6 +94,10 @@ function ProjectPreview() {
                     ? 'bg-sky-500 text-white font-bold'
                     : 'bg-white text-sky-500 hover:bg-sky-500 hover:text-white'
                   }`}
+                data-aos="fade-left"
+                data-aos-delay={index * 200}
+                data-aos-mirror="true"
+                data-aos-easing="ease-in-sine"
               >
                 {item}
               </div>

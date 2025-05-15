@@ -57,7 +57,7 @@
     }
 
     .profile-mobile {
-        @apply h-60 bg-cover group-active:scale-105 sm:group-hover:-translate-y-4 sm:w-700 sm:h-full sm:scale-125 sm:bg-size-[auto_585px] sm:bg-center lg:bg-size-[485px] xl:bg-size-[470px] 2xl:bg-size-[448px] transition-transform duration-300 ease-in
+        @apply h-60 bg-cover group-active:scale-105 sm:group-hover:-translate-y-4 sm:w-700 sm:h-full sm:scale-125 sm:bg-size-[auto_585px] sm:bg-center lg:bg-size-[485px] xl:bg-size-[470px] xl:w-500 xl:bg-position-[120px] xl:bg-left 2xl:bg-size-[450px] 2xl:bg-position-[170px] transition-transform duration-300 ease-in
     }
 
     .profile {
@@ -105,11 +105,11 @@
     }
 
     .waving-hand {
-        @apply inline-block cursor-pointer group-hover:rotate-45 transition-all duration-300
+        @apply inline-block cursor-pointer sm:group-hover:rotate-45 group-active:rotate-45 transition-all duration-300
     }
 
     .role {
-        @apply inline-block sm:mt-3.5 sm:mb-3.5 font-bold group-hover:underline text-sky-600 group-hover:decoration-sky-700/50 group-hover:translate-y-4 transition-transform duration-300 cursor-pointer
+        @apply inline-block sm:mt-3.5 sm:mb-3.5 font-bold sm:group-hover:underline text-sky-600 sm:group-hover:decoration-sky-700/50 sm:group-hover:translate-y-4 group-active:decoration-sky-700/50 group-active:translate-y-4 group-active:underline transition-transform duration-300 cursor-pointer
     }
 
     .text-description {
