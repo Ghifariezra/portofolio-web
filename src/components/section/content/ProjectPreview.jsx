@@ -66,7 +66,7 @@ function ProjectPreview() {
       <div className='dropdown'>
         <div className="dropdown-btn" onClick={handleDropdown}>
           {active} {
-            dropdown ? <ArrowDropDownRoundedIcon data-aos="flip-down" /> : <ArrowDropUpRoundedIcon data-aos="flip-up" />
+            dropdown ? <ArrowDropUpRoundedIcon data-aos="flip-up" /> : <ArrowDropDownRoundedIcon data-aos="flip-down" />
           }
         </div> 
         {dropdown && (
