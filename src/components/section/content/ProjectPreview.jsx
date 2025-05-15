@@ -77,7 +77,7 @@ function ProjectPreview() {
       <div className='dropdown'>
         <div className="dropdown-btn" onClick={handleDropdown}>
           {active} {
-            dropdown ? <ArrowDropDownRoundedIcon /> : <ArrowDropUpRoundedIcon />
+            dropdown ? <ArrowDropDownRoundedIcon data-aos="flip-down" /> : <ArrowDropUpRoundedIcon data-aos="flip-up" />
           }
         </div> 
         {dropdown && (
@@ -94,7 +94,7 @@ function ProjectPreview() {
                     ? 'bg-sky-500 text-white font-bold'
                     : 'bg-white text-sky-500 hover:bg-sky-500 hover:text-white'
                   }`}
-                data-aos="fade-left"
+                data-aos="zoom-in-left"
                 data-aos-delay={index * 200}
                 data-aos-mirror="true"
                 data-aos-easing="ease-in-sine"

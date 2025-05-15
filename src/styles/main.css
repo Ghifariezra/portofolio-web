@@ -166,7 +166,7 @@
     }
 
     .dropdown-btn {
-        @apply px-4 py-2 flex justify-between rounded-xl bg-white text-sky-500 active:bg-sky-500 active:text-white cursor-pointer
+        @apply px-4 py-2 flex justify-between rounded-xl bg-white text-sky-500 active:bg-sky-500 active:text-white cursor-pointer transition-all duration-300
     }
 
     .dropdown-content {
