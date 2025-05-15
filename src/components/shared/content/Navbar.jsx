@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom';
 const RESUME = import.meta.env.VITE_RESUME
 const Contact = import.meta.env.VITE_TELEGRAM
 
@@ -26,12 +27,12 @@ function NavbarComponents() {
             {item.name}
           </a>
         ) :
-          <a
+          <Link
             key={index}
-            href={item.href}
+            to={item.href}
             className='text-item'>
             {item.name}
-          </a>
+          </Link>
         }
       </div>
     ))}
