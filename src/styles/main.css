@@ -6,7 +6,6 @@
 }
 
 @layer components {
-
     /* Loader */
     .load-section {
         @apply w-full h-screen flex flex-col items-center justify-center bg-linear-to-t from-sky-300/75 to-sky-500/75
