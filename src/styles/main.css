@@ -57,7 +57,7 @@
     }
 
     .profile-mobile {
-        @apply h-60 bg-cover group-active:scale-105 sm:group-hover:-translate-y-4 sm:w-700 sm:h-full sm:scale-125 sm:bg-size-[auto_585px] sm:bg-center lg:bg-size-[485px] xl:bg-size-[470px] xl:w-500 xl:bg-position-[120px] xl:bg-left 2xl:bg-size-[450px] 2xl:bg-position-[170px] transition-transform duration-300 ease-in
+        @apply h-60 bg-cover group-active:scale-105 sm:group-hover:-translate-y-4 sm:w-700 sm:h-full sm:scale-125 sm:bg-size-[auto_585px] sm:bg-center lg:bg-size-[485px] xl:bg-size-[400px] xl:w-500 xl:bg-position-[150px] xl:bg-left 2xl:bg-size-[370px] 2xl:bg-position-[200px] transition-transform duration-300 ease-in
     }
 
     .profile {
