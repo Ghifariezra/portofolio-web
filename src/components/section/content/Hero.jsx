@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react'
 import Form from '@components/form/Form'
 import { fetchHero } from '@services/MyAPI'
 import PROFILE from '@assets/profile.jpeg'
-
+ 
 function HeroComponents() {
   const [hero, setHero] = useState({
     skills: [],

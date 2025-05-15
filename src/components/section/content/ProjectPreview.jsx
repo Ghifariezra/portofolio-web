@@ -79,7 +79,7 @@ function ProjectPreview() {
           {active} {
             dropdown ? <ArrowDropDownRoundedIcon /> : <ArrowDropUpRoundedIcon />
           }
-        </div>
+        </div> 
         {dropdown && (
           <div className="dropdown-content" data-aos="flip-down" data-aos-easing="ease-in-sine">
             {catalog.map((item, index) => (

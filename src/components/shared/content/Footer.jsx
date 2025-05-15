@@ -15,7 +15,7 @@ function FooterComponents() {
     useEffect(() => {
         getHero()
     }, [])
-
+ 
     return (
         <div className='footer-component'>
             <h1 className="copyright">@GhifariEzraRamadhan</h1>

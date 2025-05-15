@@ -52,7 +52,7 @@ const Form = ({ closeModal }) => {
                 alert("Gagal mengirim pesan.");
             });
     };
-
+ 
     return (
         <div className="flex justify-center items-center h-screen">
             <div className="bg-white rounded-lg shadow-lg p-4 w-80 sm:p-6 sm:w-96">

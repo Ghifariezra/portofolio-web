@@ -5,5 +5,5 @@ function CertificateCardsPreview({ image, title, certificate }) {
         </div>
     )
 }
-
+ 
 export default CertificateCardsPreview

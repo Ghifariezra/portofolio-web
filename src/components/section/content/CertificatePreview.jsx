@@ -70,5 +70,5 @@ function CertificatePreview() {
         </div>
     )
 }
-
+ 
 export default CertificatePreview
