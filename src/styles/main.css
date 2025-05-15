@@ -56,9 +56,12 @@
         @apply object-cover rounded-t-full sm:rounded-t-4xl sm:rounded-br-4xl xl:rounded-none xl:rounded-t-4xl xl:rounded-bl-4xl overflow-hidden border-double border-4 border-sky-700/20 relative transition-transform duration-500 ease-in-out sm:hover:scale-105;
     }
 
+    .profile-mobile {
+        @apply h-60 bg-cover group-active:scale-105 sm:group-hover:-translate-y-4 sm:w-700 sm:h-full sm:scale-125 sm:bg-size-[auto_585px] sm:bg-center lg:bg-size-[485px] xl:bg-size-[470px] 2xl:bg-size-[448px] transition-transform duration-300 ease-in
+    }
 
     .profile {
-        @apply h-full object-cover object-top group-active:scale-105 sm:group-hover:scale-105 transition-transform duration-300 ease-in
+        @apply hidden sm:block sm:w-100 sm:h-60 sm:object-cover group-active:scale-105 sm:group-hover:scale-105 transition-transform duration-300 ease-in
     }
 
     .profile-gradient {
@@ -84,6 +87,7 @@
     .wrapper-sosmed {
         @apply flex flex-row gap-4 px-4 pt-4
     }
+
     .social-media {
         @apply w-6 h-6
     }
@@ -124,7 +128,7 @@
         @apply inline-block ml-2 animate-bounce scale-125 group-hover:scale-150 group-hover:rotate-12 transition-all duration-300
     }
 
-    .wrapper-modal{
+    .wrapper-modal {
         @apply fixed inset-0 z-50 bg-sky-800/50 flex items-center justify-center
     }
 
@@ -236,6 +240,7 @@
     .head-card {
         @apply text-sky-700 text-base sm:text-lg md:text-xl font-bold tracking-wider break-words
     }
+
     .description {
         @apply text-sky-950/50 text-[10px] sm:text-[12px] md:text-[14px] tracking-wider break-words
     }
@@ -276,9 +281,11 @@
     .wrapper-certificate {
         @apply grid gap-8 md:grid-cols-2
     }
+
     .certificate-card {
         @apply flex flex-col gap-4 bg-white rounded-2xl drop-shadow-sm w-full h-70 sm:h-76 lg:h-96 xl:h-120 overflow-hidden
     }
+
     .img-certificate {
         @apply w-full h-full bg-center bg-contain bg-no-repeat
     }
@@ -287,15 +294,19 @@
     .footer-section {
         @apply px-8 select-none bg-white
     }
+
     .footer-component {
         @apply h-20 sm:h-25 grid grid-cols-2 justify-between items-center
     }
+
     .copyright {
         @apply text-sm text-sky-400 sm:text-base font-bold tracking-wider
     }
+
     .footer-sosmed {
         @apply flex flex-row justify-end gap-2 sm:gap-4
-    }   
+    }
+
     .footer-social-media {
         @apply w-4 h-4 sm:w-6 sm:h-6
     }
